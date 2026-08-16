@@ -478,44 +478,44 @@ main {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  min-height: 280px;
+  min-height: 200px;
 }
 
 /* ── iPhone frame ── */
 .phone {
-  --phone-width: 220px;
+  --phone-width: 160px;
   width: var(--phone-width);
   flex-shrink: 0;
 }
 
 .phone--teaser {
-  --phone-width: 200px;
-  transform: translateY(28px);
+  --phone-width: 130px;
+  transform: translateY(20px);
 }
 
 .phone--large {
-  --phone-width: min(280px, 72vw);
+  --phone-width: min(175px, 36vw);
 }
 
 .phone-bezel {
   position: relative;
-  padding: 10px;
-  border-radius: 42px;
+  padding: 7px;
+  border-radius: 32px;
   background: linear-gradient(145deg, #2a2a2e 0%, #0a0a0c 55%, #1c1c20 100%);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.08),
-    0 28px 70px rgba(0, 0, 0, 0.45),
+    0 16px 40px rgba(0, 0, 0, 0.35),
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .phone-bezel::before {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 10px;
   left: 50%;
   transform: translateX(-50%);
   width: 28%;
-  height: 22px;
+  height: 16px;
   border-radius: 999px;
   background: #050508;
   z-index: 2;
@@ -523,7 +523,7 @@ main {
 }
 
 .phone-screen {
-  border-radius: 34px;
+  border-radius: 26px;
   overflow: hidden;
   background: #000;
   aspect-ratio: 1206 / 2622;
@@ -575,7 +575,7 @@ main {
 }
 
 .shots-lead {
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 1.75rem;
   max-width: 46ch;
   color: rgba(255, 255, 255, 0.78);
   font-size: 1.02rem;
@@ -588,45 +588,45 @@ main {
   justify-content: center;
   align-items: flex-end;
   gap: 0;
-  min-height: 340px;
+  min-height: 220px;
   padding-bottom: 0;
 }
 
 .shots-fan .phone {
-  --phone-width: 190px;
-  margin: 0 -1.25rem;
+  --phone-width: 120px;
+  margin: 0 -0.85rem;
 }
 
 .shots-fan .phone--left {
-  transform: rotate(-8deg) translateY(24px);
+  transform: rotate(-8deg) translateY(16px);
   z-index: 1;
   opacity: 0.92;
 }
 
 .shots-fan .phone--center {
-  --phone-width: 220px;
+  --phone-width: 145px;
   z-index: 3;
-  transform: translateY(-8px);
+  transform: translateY(-4px);
 }
 
 .shots-fan .phone--right {
-  transform: rotate(8deg) translateY(24px);
+  transform: rotate(8deg) translateY(16px);
   z-index: 2;
   opacity: 0.92;
 }
 
 .shots-main {
-  max-width: 980px;
+  max-width: 880px;
   margin: 0 auto;
-  padding: 3.5rem 1.25rem 4rem;
+  padding: 2.5rem 1.25rem 3rem;
 }
 
 .shot-row {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
   align-items: center;
-  padding: 2.5rem 0;
+  padding: 1.75rem 0;
 }
 
 .shot-row + .shot-row {
@@ -798,13 +798,13 @@ main {
   }
 
   .teaser-phone {
-    min-height: 240px;
+    min-height: 160px;
   }
 
   .shot-row,
   .shot-row--reverse {
     grid-template-columns: 1fr;
-    gap: 1.75rem;
+    gap: 1.25rem;
     text-align: center;
   }
 
@@ -818,17 +818,21 @@ main {
     margin: 0 auto;
   }
 
+  .phone--large {
+    --phone-width: min(155px, 42vw);
+  }
+
   .shots-fan .phone {
-    --phone-width: 150px;
-    margin: 0 -0.75rem;
+    --phone-width: 105px;
+    margin: 0 -0.5rem;
   }
 
   .shots-fan .phone--center {
-    --phone-width: 170px;
+    --phone-width: 125px;
   }
 
   .shots-fan {
-    min-height: 280px;
+    min-height: 190px;
   }
 }
 
@@ -851,7 +855,7 @@ main {
   }
 
   .shots-fan {
-    min-height: 240px;
+    min-height: 170px;
   }
 
   .shots-fan .phone--left,
@@ -860,9 +864,13 @@ main {
   }
 
   .shots-fan .phone--center {
-    --phone-width: 200px;
+    --phone-width: 130px;
     transform: none;
     margin: 0;
+  }
+
+  .phone--teaser {
+    --phone-width: 115px;
   }
 
   .plan-card.highlight::before {
