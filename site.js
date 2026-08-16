@@ -1,6 +1,8 @@
 (function () {
   const STORAGE_KEY = 'waynex-site-lang';
   const DEFAULT_LANG = 'it';
+  // Update when the App Store listing is live (App Store Connect → App Information → Apple ID).
+  const APP_STORE_URL = 'https://apps.apple.com/app/waynex/id0000000000';
 
   const copy = {
     it: {
@@ -15,7 +17,7 @@
       heroTitle: 'Il tuo viaggio.<br>Tutto in un unico posto.',
       heroLead:
         'Organizza itinerari, luoghi, documenti e spese di gruppo — anche offline. Condividi con iCloud e viaggiate insieme senza caos.',
-      heroCta: 'Disponibile su App Store — scrivici',
+      heroCta: 'Scarica su App Store',
       f1Title: 'Pianifica giorno per giorno',
       f1Body:
         'Timeline, mappa e luoghi da scoprire. Tieni tutto sotto controllo prima e durante il viaggio.',
@@ -34,13 +36,17 @@
       f6Title: 'Apple Watch',
       f6Body:
         'Checklist e info del viaggio a polso. Complemento perfetto per quando sei in giro.',
+      screenshotsTitle: 'Guarda l’app',
+      screenshotsNote:
+        'Schermate reali dall’app Waynex su iPhone.',
+      screenshotTrips: 'I tuoi viaggi',
+      screenshotPlan: 'Pianificazione',
+      screenshotBudget: 'Spese di gruppo',
       plansTitle: 'Piani Waynex',
       plansNote:
-        'Prezzi indicativi per l’Italia. Su App Store vedi il prezzo locale del tuo paese.',
+        'Confronta Free, Plus e Max nell’app. Prezzi e abbonamenti sono quelli mostrati da Apple sul tuo App Store locale.',
       planPopular: 'Popolare',
-      freePrice: 'Gratis',
-      plusPrice: '€2,99 / mese',
-      maxPrice: '€8,99 / mese',
+      plansCta: 'Vedi prezzi su App Store',
       free1: 'Fino a 3 viaggi attivi',
       free2: 'Pianificazione e mappa',
       free3: 'Spese di gruppo',
@@ -72,7 +78,7 @@
       heroTitle: 'Your trip.<br>All in one place.',
       heroLead:
         'Plan itineraries, places, documents, and group expenses — even offline. Share via iCloud and travel together without the chaos.',
-      heroCta: 'On the App Store — get in touch',
+      heroCta: 'Download on the App Store',
       f1Title: 'Plan day by day',
       f1Body:
         'Timeline, map, and places to discover. Stay on top of everything before and during your trip.',
@@ -91,13 +97,16 @@
       f6Title: 'Apple Watch',
       f6Body:
         'Checklists and trip info on your wrist. Handy when you are out exploring.',
+      screenshotsTitle: 'See the app',
+      screenshotsNote: 'Real screenshots from Waynex on iPhone.',
+      screenshotTrips: 'Your trips',
+      screenshotPlan: 'Day-by-day planning',
+      screenshotBudget: 'Group expenses',
       plansTitle: 'Waynex plans',
       plansNote:
-        'Sample prices for Italy. See the App Store for pricing in your country.',
+        'Compare Free, Plus, and Max in the app. Prices and subscriptions are whatever Apple shows in your local App Store.',
       planPopular: 'Popular',
-      freePrice: 'Free',
-      plusPrice: '€2.99 / month',
-      maxPrice: '€8.99 / month',
+      plansCta: 'See pricing on the App Store',
       free1: 'Up to 3 active trips',
       free2: 'Planning and map',
       free3: 'Group expenses',
@@ -135,6 +144,10 @@
 
     const meta = document.querySelector('meta[name="description"]');
     if (meta) meta.setAttribute('content', strings.metaDescription);
+
+    document.querySelectorAll('[data-app-store]').forEach((node) => {
+      node.setAttribute('href', APP_STORE_URL);
+    });
 
     document.querySelectorAll('[data-i18n]').forEach((node) => {
       const key = node.getAttribute('data-i18n');
