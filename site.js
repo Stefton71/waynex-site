@@ -37,6 +37,7 @@
       plansTitle: 'Piani Waynex',
       plansNote:
         'Prezzi indicativi per l’Italia. Su App Store vedi il prezzo locale del tuo paese.',
+      planPopular: 'Popolare',
       freePrice: 'Gratis',
       plusPrice: '€2,99 / mese',
       maxPrice: '€8,99 / mese',
@@ -93,6 +94,7 @@
       plansTitle: 'Waynex plans',
       plansNote:
         'Sample prices for Italy. See the App Store for pricing in your country.',
+      planPopular: 'Popular',
       freePrice: 'Free',
       plusPrice: '€2.99 / month',
       maxPrice: '€8.99 / month',

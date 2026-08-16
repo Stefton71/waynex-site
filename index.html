@@ -38,12 +38,17 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <img class="hero-icon" src="/assets/app-icon.png" alt="Waynex app icon" width="112" height="112">
-      <span class="hero-badge" data-i18n="heroBadge">iPhone · iPad · Apple Watch</span>
-      <h1 data-i18n="heroTitle">Il tuo viaggio.<br>Tutto in un unico posto.</h1>
-      <p class="lead" data-i18n="heroLead">Organizza itinerari, luoghi, documenti e spese di gruppo — anche offline. Condividi con iCloud e viaggiate insieme senza caos.</p>
-      <a class="hero-cta muted" href="mailto:support@wainex.it" data-i18n="heroCta">Disponibile su App Store — scrivici</a>
+      <div class="hero-stack">
+        <div class="hero-icon-wrap">
+          <img class="hero-icon" src="/assets/app-icon.png" alt="Waynex" width="96" height="96">
+        </div>
+        <span class="hero-badge" data-i18n="heroBadge">iPhone · iPad · Apple Watch</span>
+        <h1 data-i18n="heroTitle">Il tuo viaggio.<br>Tutto in un unico posto.</h1>
+        <p class="lead" data-i18n="heroLead">Organizza itinerari, luoghi, documenti e spese di gruppo — anche offline. Condividi con iCloud e viaggiate insieme senza caos.</p>
+        <a class="hero-cta" href="mailto:support@wainex.it" data-i18n="heroCta">Disponibile su App Store — scrivici</a>
+      </div>
     </div>
+    <div class="hero-curve" aria-hidden="true"></div>
   </section>
 
   <main>
@@ -80,9 +85,11 @@
       </article>
     </div>
 
-    <section class="section" id="piani">
-      <h2 data-i18n="plansTitle">Piani Waynex</h2>
-      <p class="section-note" data-i18n="plansNote">Prezzi indicativi per l’Italia. Su App Store vedi il prezzo locale del tuo paese.</p>
+    <section class="section section-plans" id="piani">
+      <div class="section-header">
+        <h2 data-i18n="plansTitle">Piani Waynex</h2>
+        <p class="section-note" data-i18n="plansNote">Prezzi indicativi per l’Italia. Su App Store vedi il prezzo locale del tuo paese.</p>
+      </div>
       <div class="plans">
         <article class="plan-card">
           <h3>Free</h3>
@@ -95,6 +102,7 @@
           </ul>
         </article>
         <article class="plan-card highlight">
+          <span class="plan-tag" data-i18n="planPopular">Popolare</span>
           <h3>Plus</h3>
           <p class="plan-price" data-i18n="plusPrice">€2,99 / mese</p>
           <ul>
