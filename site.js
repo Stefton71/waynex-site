@@ -36,7 +36,7 @@
         'Genera un itinerario con l’AI, importalo in Waynex e personalizzalo con il tuo gruppo.',
       f6Title: 'Apple Watch',
       f6Body:
-        'Checklist e info del viaggio a polso. Complemento perfetto per quando sei in giro.',
+        'Programma e checklist a polso, sincronizzati con iPhone. Richiede Waynex Plus o Max.',
       screenshotsTeaserTitle: 'Guarda l’app in azione',
       screenshotsTeaserBody:
         'Schermate reali su iPhone: viaggi, timeline e spese di gruppo.',
@@ -80,6 +80,7 @@
       plus3: 'Report PDF',
       plus4: 'Crea e importa viaggi con AI',
       plus5: 'Anteprime sui luoghi',
+      plus6: 'Apple Watch (companion)',
       max1: 'Tutto di Plus',
       max2: 'Foto Google sui luoghi',
       max3: 'Modifica insieme (fino a 9)',
@@ -121,7 +122,7 @@
         'Generate an itinerary with AI, import it into Waynex, and refine it with your group.',
       f6Title: 'Apple Watch',
       f6Body:
-        'Checklists and trip info on your wrist. Handy when you are out exploring.',
+        'Itinerary and checklist on your wrist, synced from iPhone. Requires Waynex Plus or Max.',
       screenshotsTeaserTitle: 'See the app in action',
       screenshotsTeaserBody:
         'Real iPhone screenshots: trips, timeline, and group expenses.',
@@ -165,6 +166,7 @@
       plus3: 'PDF report',
       plus4: 'Create & import trips with AI',
       plus5: 'Place previews',
+      plus6: 'Apple Watch companion',
       max1: 'Everything in Plus',
       max2: 'Google place photos',
       max3: 'Co-edit together (up to 9)',
