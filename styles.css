@@ -485,7 +485,8 @@ main {
 .phone {
   --phone-width: 160px;
   width: var(--phone-width);
-  flex-shrink: 0;
+  max-width: var(--phone-width);
+  flex: 0 0 var(--phone-width);
 }
 
 .phone--teaser {
@@ -494,11 +495,12 @@ main {
 }
 
 .phone--large {
-  --phone-width: min(175px, 36vw);
+  --phone-width: 168px;
 }
 
 .phone-bezel {
   position: relative;
+  width: 100%;
   padding: 7px;
   border-radius: 32px;
   background: linear-gradient(145deg, #2a2a2e 0%, #0a0a0c 55%, #1c1c20 100%);
@@ -523,6 +525,7 @@ main {
 }
 
 .phone-screen {
+  width: 100%;
   border-radius: 26px;
   overflow: hidden;
   background: #000;
@@ -533,6 +536,7 @@ main {
 .phone-screen img {
   width: 100%;
   height: 100%;
+  max-width: 100%;
   display: block;
   object-fit: cover;
   object-position: top center;
@@ -583,36 +587,32 @@ main {
 }
 
 .shots-fan {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 0;
-  min-height: 220px;
-  padding-bottom: 0;
+  gap: 1rem;
+  padding: 0 1rem 1.5rem;
+  overflow: hidden;
 }
 
 .shots-fan .phone {
-  --phone-width: 120px;
-  margin: 0 -0.85rem;
+  --phone-width: 118px;
 }
 
 .shots-fan .phone--left {
-  transform: rotate(-8deg) translateY(16px);
-  z-index: 1;
-  opacity: 0.92;
+  transform: rotate(-6deg) translateY(12px);
+  opacity: 0.88;
 }
 
 .shots-fan .phone--center {
-  --phone-width: 145px;
-  z-index: 3;
-  transform: translateY(-4px);
+  --phone-width: 142px;
+  transform: translateY(-6px);
+  z-index: 2;
 }
 
 .shots-fan .phone--right {
-  transform: rotate(8deg) translateY(16px);
-  z-index: 2;
-  opacity: 0.92;
+  transform: rotate(6deg) translateY(12px);
+  opacity: 0.88;
 }
 
 .shots-main {
@@ -819,20 +819,15 @@ main {
   }
 
   .phone--large {
-    --phone-width: min(155px, 42vw);
+    --phone-width: 150px;
   }
 
   .shots-fan .phone {
-    --phone-width: 105px;
-    margin: 0 -0.5rem;
+    --phone-width: 100px;
   }
 
   .shots-fan .phone--center {
-    --phone-width: 125px;
-  }
-
-  .shots-fan {
-    min-height: 190px;
+    --phone-width: 118px;
   }
 }
 
@@ -854,23 +849,12 @@ main {
     grid-template-columns: 1fr;
   }
 
-  .shots-fan {
-    min-height: 170px;
-  }
-
-  .shots-fan .phone--left,
-  .shots-fan .phone--right {
-    display: none;
-  }
-
   .shots-fan .phone--center {
-    --phone-width: 130px;
-    transform: none;
-    margin: 0;
+    --phone-width: 125px;
   }
 
   .phone--teaser {
-    --phone-width: 115px;
+    --phone-width: 110px;
   }
 
   .plan-card.highlight::before {
