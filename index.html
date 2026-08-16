@@ -5,34 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Waynex — il compagno di viaggio per gruppi. Itinerari, luoghi, documenti e spese in un unico posto.">
   <title>Waynex — Il tuo viaggio, tutto in un posto</title>
+  <link rel="icon" href="/assets/app-icon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/app-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/site.js"></script>
 </head>
 <body>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="/">
+      <a class="brand" data-link="home" href="/">
         <span class="brand-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2L4 7v10l8 5 8-5V7l-8-5zm0 2.2l6 3.75v7.5L12 19.3l-6-3.75v-7.5L12 4.2zM11 8v8h2V8h-2z"/></svg>
+          <img src="/assets/app-icon.png" alt="" width="36" height="36">
         </span>
         Waynex
       </a>
-      <nav class="nav-links" aria-label="Principale">
-        <a href="/privacy/">Privacy</a>
-        <a href="/terms/">Termini</a>
-        <a href="mailto:support@wainex.it">Contatti</a>
-      </nav>
+      <div class="header-right">
+        <nav class="nav-links" aria-label="Main">
+          <a data-link="privacy" href="/privacy/" data-i18n="navPrivacy">Privacy</a>
+          <a data-link="terms" href="/terms/" data-i18n="navTerms">Termini</a>
+          <a href="mailto:support@wainex.it" data-i18n="navContact">Contatti</a>
+        </nav>
+        <div class="lang-switch" aria-label="Language">
+          <a href="#" data-lang-btn="it" class="active">IT</a>
+          <a href="#" data-lang-btn="en">EN</a>
+        </div>
+      </div>
     </div>
   </header>
 
   <section class="hero">
     <div class="hero-inner">
-      <span class="hero-badge">iPhone · iPad · Apple Watch</span>
-      <h1>Il tuo viaggio.<br>Tutto in un unico posto.</h1>
-      <p class="lead">Organizza itinerari, luoghi, documenti e spese di gruppo — anche offline. Condividi con iCloud e viaggiate insieme senza caos.</p>
-      <a class="hero-cta muted" href="mailto:support@wainex.it">Disponibile su App Store — contattaci</a>
+      <img class="hero-icon" src="/assets/app-icon.png" alt="Waynex app icon" width="112" height="112">
+      <span class="hero-badge" data-i18n="heroBadge">iPhone · iPad · Apple Watch</span>
+      <h1 data-i18n="heroTitle">Il tuo viaggio.<br>Tutto in un unico posto.</h1>
+      <p class="lead" data-i18n="heroLead">Organizza itinerari, luoghi, documenti e spese di gruppo — anche offline. Condividi con iCloud e viaggiate insieme senza caos.</p>
+      <a class="hero-cta muted" href="mailto:support@wainex.it" data-i18n="heroCta">Disponibile su App Store — scrivici</a>
     </div>
   </section>
 
@@ -40,67 +50,69 @@
     <div class="features">
       <article class="feature-card">
         <div class="feature-icon" aria-hidden="true">🗺️</div>
-        <h3>Pianifica giorno per giorno</h3>
-        <p>Timeline, mappa e luoghi da scoprire. Tieni tutto sotto controllo prima e durante il viaggio.</p>
+        <h3 data-i18n="f1Title">Pianifica giorno per giorno</h3>
+        <p data-i18n="f1Body">Timeline, mappa e luoghi da scoprire. Tieni tutto sotto controllo prima e durante il viaggio.</p>
       </article>
       <article class="feature-card">
         <div class="feature-icon" aria-hidden="true">👥</div>
-        <h3>Viaggia in gruppo</h3>
-        <p>Condividi il viaggio via iCloud. Tutti vedono lo stesso piano, aggiornato in tempo reale.</p>
+        <h3 data-i18n="f2Title">Viaggia in gruppo</h3>
+        <p data-i18n="f2Body">Condividi il viaggio via iCloud. Tutti vedono lo stesso piano, aggiornato in tempo reale.</p>
       </article>
       <article class="feature-card">
         <div class="feature-icon" aria-hidden="true">💶</div>
-        <h3>Spese divise</h3>
-        <p>Registra le spese e calcola chi deve cosa a chi. Niente più fogli Excel in vacanza.</p>
+        <h3 data-i18n="f3Title">Spese divise</h3>
+        <p data-i18n="f3Body">Registra le spese e calcola chi deve cosa a chi. Niente più fogli Excel in vacanza.</p>
       </article>
       <article class="feature-card">
         <div class="feature-icon" aria-hidden="true">📄</div>
-        <h3>Documenti e PDF</h3>
-        <p>Biglietti, prenotazioni e report PDF del viaggio. Importa da share sheet o fotocamera.</p>
+        <h3 data-i18n="f4Title">Documenti e PDF</h3>
+        <p data-i18n="f4Body">Biglietti, prenotazioni e report PDF del viaggio. Importa da share sheet o fotocamera.</p>
       </article>
       <article class="feature-card">
         <div class="feature-icon" aria-hidden="true">✨</div>
-        <h3>Crea con AI</h3>
-        <p>Genera un itinerario con l’AI, importalo in Waynex e personalizzalo con il tuo gruppo.</p>
+        <h3 data-i18n="f5Title">Crea con AI</h3>
+        <p data-i18n="f5Body">Genera un itinerario con l’AI, importalo in Waynex e personalizzalo con il tuo gruppo.</p>
       </article>
       <article class="feature-card">
         <div class="feature-icon" aria-hidden="true">⌚</div>
-        <h3>Apple Watch</h3>
-        <p>Checklist e info del viaggio a polso. Complemento perfetto per quando sei in giro.</p>
+        <h3 data-i18n="f6Title">Apple Watch</h3>
+        <p data-i18n="f6Body">Checklist e info del viaggio a polso. Complemento perfetto per quando sei in giro.</p>
       </article>
     </div>
 
     <section class="section" id="piani">
-      <h2>Piani Waynex</h2>
+      <h2 data-i18n="plansTitle">Piani Waynex</h2>
+      <p class="section-note" data-i18n="plansNote">Prezzi indicativi per l’Italia. Su App Store vedi il prezzo locale del tuo paese.</p>
       <div class="plans">
         <article class="plan-card">
           <h3>Free</h3>
-          <p class="plan-price">Gratis</p>
+          <p class="plan-price" data-i18n="freePrice">Gratis</p>
           <ul>
-            <li>Fino a 2 viaggi attivi</li>
-            <li>Pianificazione e mappa</li>
-            <li>Spese di gruppo</li>
-            <li>Anteprime luoghi (Wikipedia)</li>
+            <li data-i18n="free1">Fino a 3 viaggi attivi</li>
+            <li data-i18n="free2">Pianificazione e mappa</li>
+            <li data-i18n="free3">Spese di gruppo</li>
+            <li data-i18n="free4">Icone sui luoghi</li>
           </ul>
         </article>
         <article class="plan-card highlight">
           <h3>Plus</h3>
-          <p class="plan-price">2,99 € / mese</p>
+          <p class="plan-price" data-i18n="plusPrice">€2,99 / mese</p>
           <ul>
-            <li>Viaggi illimitati</li>
-            <li>Condivisione iCloud</li>
-            <li>Report PDF</li>
-            <li>Creazione viaggio con AI</li>
+            <li data-i18n="plus1">Viaggi illimitati</li>
+            <li data-i18n="plus2">Condivisione (fino a 3, 1 editor)</li>
+            <li data-i18n="plus3">Report PDF</li>
+            <li data-i18n="plus4">Crea e importa viaggi con AI</li>
+            <li data-i18n="plus5">Anteprime sui luoghi</li>
           </ul>
         </article>
         <article class="plan-card">
           <h3>Max</h3>
-          <p class="plan-price">4,99 € / mese</p>
+          <p class="plan-price" data-i18n="maxPrice">€8,99 / mese</p>
           <ul>
-            <li>Tutto di Plus</li>
-            <li>Foto Google sui luoghi</li>
-            <li>Modifica insieme (fino a 9)</li>
-            <li>Fino a 400 foto/mese</li>
+            <li data-i18n="max1">Tutto di Plus</li>
+            <li data-i18n="max2">Foto Google sui luoghi</li>
+            <li data-i18n="max3">Modifica insieme (fino a 9)</li>
+            <li data-i18n="max4">Fino a 400 foto al mese</li>
           </ul>
         </article>
       </div>
@@ -110,9 +122,9 @@
   <footer class="site-footer">
     <div class="footer-inner">
       <span>© 2026 Waynex</span>
-      <nav class="footer-links" aria-label="Legale">
-        <a href="/privacy/">Privacy Policy</a>
-        <a href="/terms/">Termini di utilizzo</a>
+      <nav class="footer-links" aria-label="Legal">
+        <a data-link="privacy" href="/privacy/" data-i18n="footerPrivacy">Privacy Policy</a>
+        <a data-link="terms" href="/terms/" data-i18n="footerTerms">Termini di utilizzo</a>
         <a href="mailto:support@wainex.it">support@wainex.it</a>
       </nav>
     </div>

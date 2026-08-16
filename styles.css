@@ -50,7 +50,6 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 10;
-  backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -60,6 +59,12 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -81,22 +86,21 @@ a:hover {
 .brand-mark {
   width: 36px;
   height: 36px;
-  border-radius: 10px;
-  background: linear-gradient(145deg, var(--sea-light), var(--sea));
-  display: grid;
-  place-items: center;
+  border-radius: 9px;
+  overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
 }
 
-.brand-mark svg {
-  width: 20px;
-  height: 20px;
-  fill: #fff;
+.brand-mark img {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .nav-links {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.1rem;
   font-size: 0.92rem;
 }
 
@@ -110,18 +114,52 @@ a:hover {
   text-decoration: none;
 }
 
+.lang-switch {
+  display: inline-flex;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  overflow: hidden;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.lang-switch a {
+  padding: 0.28rem 0.65rem;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+.lang-switch a.active {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.lang-switch a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
 .hero {
   background:
     radial-gradient(ellipse 80% 60% at 50% -10%, rgba(61, 139, 158, 0.35), transparent),
     linear-gradient(180deg, var(--deep-blue-dark) 0%, var(--deep-blue) 100%);
   color: #fff;
-  padding: 4.5rem 1.5rem 5rem;
+  padding: 3.5rem 1.5rem 5rem;
   text-align: center;
 }
 
 .hero-inner {
   max-width: 680px;
   margin: 0 auto;
+}
+
+.hero-icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 24px;
+  margin: 0 auto 1.25rem;
+  display: block;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28);
 }
 
 .hero-badge {
@@ -240,8 +278,14 @@ main {
 .section h2 {
   font-size: 1.5rem;
   color: var(--deep-blue);
-  margin: 0 0 1rem;
+  margin: 0 0 0.35rem;
   letter-spacing: -0.02em;
+}
+
+.section-note {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin: 0 0 1rem;
 }
 
 .plans {
@@ -361,12 +405,12 @@ main {
   text-decoration: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   .nav-links {
     display: none;
   }
 
   .hero {
-    padding-top: 3rem;
+    padding-top: 2.5rem;
   }
 }
