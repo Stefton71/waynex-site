@@ -12,6 +12,7 @@
       pageTitle: 'Waynex — Il tuo viaggio, tutto in un posto',
       navPrivacy: 'Privacy',
       navTerms: 'Termini',
+      navScreenshots: 'App',
       navContact: 'Contatti',
       heroBadge: 'iPhone · iPad · Apple Watch',
       heroTitle: 'Il tuo viaggio.<br>Tutto in un unico posto.',
@@ -36,12 +37,35 @@
       f6Title: 'Apple Watch',
       f6Body:
         'Checklist e info del viaggio a polso. Complemento perfetto per quando sei in giro.',
-      screenshotsTitle: 'Guarda l’app',
-      screenshotsNote:
-        'Schermate reali dall’app Waynex su iPhone.',
-      screenshotTrips: 'I tuoi viaggi',
-      screenshotPlan: 'Pianificazione',
-      screenshotBudget: 'Spese di gruppo',
+      screenshotsTeaserTitle: 'Guarda l’app in azione',
+      screenshotsTeaserBody:
+        'Schermate reali su iPhone: viaggi, timeline e spese di gruppo.',
+      screenshotsTeaserCta: 'Vedi tutte le schermate →',
+      shotsKicker: 'Anteprima app',
+      shotsTitle: 'Waynex sul tuo iPhone',
+      shotsLead:
+        'Schermate reali dall’app — viaggi, timeline giorno per giorno e spese condivise.',
+      shot1Title: 'Tutti i viaggi, un posto solo',
+      shot1Body:
+        'Crea un viaggio manuale o con l’AI. Vedi date, progresso e destinazione a colpo d’occhio — anche il viaggio demo per provare subito.',
+      shot1Caption: 'Lista viaggi',
+      shot1Alt: 'Lista viaggi Waynex',
+      shot2Title: 'Pianifica giorno per giorno',
+      shot2Body:
+        'Timeline con luoghi, prenotazioni e attività. Scorri i giorni del viaggio e tieni tutto organizzato prima e durante il trip.',
+      shot2Caption: 'Timeline del viaggio',
+      shot2Alt: 'Timeline del viaggio Waynex',
+      shot3Title: 'Spese divise in gruppo',
+      shot3Body:
+        'Registra chi ha pagato cosa e chi deve a chi. Niente più fogli Excel in vacanza — tutto resta nel viaggio.',
+      shot3Caption: 'Bilanci e spese',
+      shot3Alt: 'Spese di gruppo Waynex',
+      shotsCtaTitle: 'Provalo tu',
+      shotsCtaBody:
+        'Scarica Waynex dall’App Store e inizia con il viaggio demo incluso.',
+      shotsPageTitle: 'Schermate — Waynex',
+      shotsMetaDescription:
+        'Schermate Waynex su iPhone — viaggi, pianificazione e spese di gruppo.',
       plansTitle: 'Piani Waynex',
       plansNote:
         'Confronta Free, Plus e Max nell’app. Prezzi e abbonamenti sono quelli mostrati da Apple sul tuo App Store locale.',
@@ -64,6 +88,7 @@
       footerTerms: 'Termini di utilizzo',
       privacyHref: '/privacy/',
       termsHref: '/terms/',
+      screenshotsHref: '/screenshots/',
       homeHref: '/',
     },
     en: {
@@ -97,11 +122,35 @@
       f6Title: 'Apple Watch',
       f6Body:
         'Checklists and trip info on your wrist. Handy when you are out exploring.',
-      screenshotsTitle: 'See the app',
-      screenshotsNote: 'Real screenshots from Waynex on iPhone.',
-      screenshotTrips: 'Your trips',
-      screenshotPlan: 'Day-by-day planning',
-      screenshotBudget: 'Group expenses',
+      screenshotsTeaserTitle: 'See the app in action',
+      screenshotsTeaserBody:
+        'Real iPhone screenshots: trips, timeline, and group expenses.',
+      screenshotsTeaserCta: 'View all screenshots →',
+      shotsKicker: 'App preview',
+      shotsTitle: 'Waynex on your iPhone',
+      shotsLead:
+        'Real screenshots from the app — trips, day-by-day timeline, and shared expenses.',
+      shot1Title: 'All your trips in one place',
+      shot1Body:
+        'Create a trip manually or with AI. See dates, progress, and destination at a glance — including a demo trip to try right away.',
+      shot1Caption: 'Trip list',
+      shot1Alt: 'Waynex trip list',
+      shot2Title: 'Plan day by day',
+      shot2Body:
+        'Timeline with places, bookings, and activities. Scroll through trip days and stay organized before and during travel.',
+      shot2Caption: 'Trip timeline',
+      shot2Alt: 'Waynex trip timeline',
+      shot3Title: 'Split group expenses',
+      shot3Body:
+        'Track who paid for what and who owes whom. No more vacation spreadsheets — everything stays in the trip.',
+      shot3Caption: 'Balances & expenses',
+      shot3Alt: 'Waynex group expenses',
+      shotsCtaTitle: 'Try it yourself',
+      shotsCtaBody:
+        'Download Waynex from the App Store and start with the included demo trip.',
+      shotsPageTitle: 'Screenshots — Waynex',
+      shotsMetaDescription:
+        'Waynex iPhone screenshots — trips, planning, and group expenses.',
       plansTitle: 'Waynex plans',
       plansNote:
         'Compare Free, Plus, and Max in the app. Prices and subscriptions are whatever Apple shows in your local App Store.',
@@ -124,6 +173,7 @@
       footerTerms: 'Terms of Use',
       privacyHref: '/en/privacy/',
       termsHref: '/en/terms/',
+      screenshotsHref: '/en/screenshots/',
       homeHref: '/',
     },
   };
@@ -140,10 +190,17 @@
     if (!strings) return;
 
     document.documentElement.lang = strings.htmlLang;
-    document.title = strings.pageTitle;
 
     const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute('content', strings.metaDescription);
+    if (document.body.classList.contains('screenshots-page')) {
+      document.title = strings.shotsPageTitle;
+      if (meta) meta.setAttribute('content', strings.shotsMetaDescription);
+    } else if (strings.pageTitle) {
+      document.title = strings.pageTitle;
+      if (meta && strings.metaDescription) {
+        meta.setAttribute('content', strings.metaDescription);
+      }
+    }
 
     document.querySelectorAll('[data-app-store]').forEach((node) => {
       node.setAttribute('href', APP_STORE_URL);
@@ -162,9 +219,18 @@
       }
     });
 
+    document.querySelectorAll('[data-i18n-alt]').forEach((node) => {
+      const key = node.getAttribute('data-i18n-alt');
+      const value = strings[key];
+      if (value != null) node.setAttribute('alt', value);
+    });
+
     const privacyLink = document.querySelector('[data-link="privacy"]');
     const termsLink = document.querySelector('[data-link="terms"]');
     const homeLink = document.querySelector('[data-link="home"]');
+    document.querySelectorAll('[data-link="screenshots"]').forEach((link) => {
+      link.setAttribute('href', strings.screenshotsHref);
+    });
     if (privacyLink) privacyLink.setAttribute('href', strings.privacyHref);
     if (termsLink) termsLink.setAttribute('href', strings.termsHref);
     if (homeLink) homeLink.setAttribute('href', strings.homeHref);
