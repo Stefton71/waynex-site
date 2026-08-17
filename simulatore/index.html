@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="description" content="">
+  <title>Waynex — Simulatore</title>
+  <link rel="icon" href="/assets/app-icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=9">
+  <script defer src="costi.js"></script>
+</head>
+<body class="costi-page">
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="/assets/app-icon.png" alt="" width="36" height="36">
+        </span>
+        Waynex
+      </a>
+      <div class="header-right">
+        <button type="button" class="costi-logout" id="logout">Esci</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="costi-main">
+    <section class="costi-gate" id="gate">
+      <h1>Area interna</h1>
+      <p>Simulatore costi Google e ricavi App Store. Non è in menu: serve la password.</p>
+      <form id="gate-form">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+        <button type="submit">Entra</button>
+        <p class="costi-error" id="gate-error" hidden>Password non corretta.</p>
+      </form>
+    </section>
+
+    <div id="app" hidden>
+      <h1>Ti restano soldi, sì o no?</h1>
+      <p class="costi-lead">
+        Il cliente paga Plus o Max. Prima esce l’IVA, poi Apple si prende una percentuale,
+        poi Google fattura le foto (solo Max). Qui vedi cosa ti resta in un mese.
+      </p>
+
+      <h2>1. Scegli lo scenario</h2>
+      <div class="costi-grid">
+        <label>
+          Quante persone hanno Max
+          <span>Max usa le foto Google: è l’unico piano che ti costa.</span>
+          <select id="maxUsers">
+            <option value="10">10 persone Max</option>
+            <option value="50" selected>50 persone Max</option>
+            <option value="200">200 persone Max</option>
+            <option value="500">500 persone Max</option>
+          </select>
+        </label>
+        <label>
+          Quante persone hanno Plus
+          <span>Plus (Watch, PDF, viaggi extra) non costa nulla su Google.</span>
+          <select id="plusUsers">
+            <option value="0">Nessun Plus</option>
+            <option value="50">50 persone Plus</option>
+            <option value="150" selected>150 persone Plus</option>
+            <option value="400">400 persone Plus</option>
+          </select>
+        </label>
+        <label>
+          Quanto usano le foto (Max)
+          <span>Google ti fa pagare ogni nuova foto scaricata.</span>
+          <select id="usage">
+            <option value="typical" selected>Un viaggio al mese (~40 foto)</option>
+            <option value="heavy">Uso intenso (~150 foto)</option>
+            <option value="worst">Tutti al massimo (400 foto)</option>
+          </select>
+        </label>
+        <label>
+          Prezzo di Plus
+          <span>Oggi è 2,99 €. 3,99 € resta tutto in tasca: Plus non ha Google.</span>
+          <select id="plusPrice">
+            <option value="2.99">2,99 € (prezzo di oggi)</option>
+            <option value="3.49">3,49 €</option>
+            <option value="3.99" selected>3,99 €</option>
+            <option value="4.99">4,99 €</option>
+          </select>
+        </label>
+        <label>
+          Quanto si tiene Apple
+          <span>Da piccolo sviluppatore di solito è il 15%.</span>
+          <select id="appleCut">
+            <option value="0.15" selected>15% · piccolo sviluppatore</option>
+            <option value="0.3">30% · Apple si prende di più</option>
+          </select>
+        </label>
+      </div>
+      <label class="costi-check">
+        <input type="checkbox" id="stress">
+        Forza il caso brutto: tutti i Max scaricano 400 foto
+      </label>
+
+      <h2>2. Il conto di questo mese</h2>
+      <div class="costi-verdict ok" id="verdict"></div>
+      <div class="costi-stats">
+        <div>
+          <div class="costi-stat-value" id="statIn">—</div>
+          <div class="costi-stat-label">Da Apple</div>
+        </div>
+        <div>
+          <div class="costi-stat-value" id="statGoogle">—</div>
+          <div class="costi-stat-label">A Google</div>
+        </div>
+        <div>
+          <div class="costi-stat-value" id="statOut">—</div>
+          <div class="costi-stat-label">Ti resta</div>
+        </div>
+      </div>
+      <p id="freeNote"></p>
+
+      <h2>3. Un solo abbonato</h2>
+      <div class="costi-table-wrap">
+        <table class="costi-table">
+          <thead>
+            <tr><th></th><th>Plus</th><th>Max</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Il cliente paga</td><td id="cellPlusPay"></td><td>8,99 €</td></tr>
+            <tr><td>A te, dopo IVA e Apple</td><td id="cellPlusNet"></td><td id="cellMaxNet"></td></tr>
+            <tr><td>Costo Google (uso scelto)</td><td id="cellPlusGoogleUse"></td><td id="cellMaxGoogleUse"></td></tr>
+            <tr><td>Costo Google se usa il massimo</td><td id="cellPlusGoogleMax"></td><td id="cellMaxGoogleMax"></td></tr>
+            <tr><td>Ti resta se usa il massimo</td><td id="cellPlusKeep"></td><td id="cellMaxKeep"></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="costi-note" id="plusNote"></div>
+
+      <h2>4. Se i Max diventano tanti</h2>
+      <svg id="chart" class="costi-chart" role="img" aria-label="Utile al crescere dei Max"></svg>
+      <p class="costi-caption" id="chartCaption"></p>
+
+      <h2>Quanto costa una chiamata Google</h2>
+      <p>
+        Google pubblica i prezzi <strong>ogni 1.000 richieste</strong>.
+        Una foto non costa 7 $: costa 7 $ ÷ 1.000 = 0,007 $ ≈ <strong>0,006 € a foto</strong>.
+        400 foto al tetto Max = circa 2,41 €, e solo dopo le 1.000 foto gratis dell’account.
+      </p>
+      <div class="costi-table-wrap">
+        <table class="costi-table">
+          <thead>
+            <tr>
+              <th>Cosa fa l’app</th>
+              <th>Gratis ogni mese (account)</th>
+              <th>Costo di una chiamata</th>
+              <th>Tetto Max a testa</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Scaricare la foto di un luogo</td>
+              <td>1.000 foto</td>
+              <td>0,006 € a foto</td>
+              <td>400</td>
+            </tr>
+            <tr>
+              <td>Cercare un luogo per nome (raro)</td>
+              <td>5.000 ricerche</td>
+              <td>0,028 € a ricerca</td>
+              <td>100</td>
+            </tr>
+            <tr>
+              <td>Scoperta luoghi Google (spenta)</td>
+              <td>5.000 ricerche</td>
+              <td>0,028 € a ricerca</td>
+              <td>30</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Regole da tenere</h2>
+      <p>
+        Non alzare il tetto delle 400 foto finché Max costa 8,99 €.
+        Non accendere la ricerca Google sui luoghi. Resta nel programma piccoli
+        sviluppatori Apple. Allarme spesa Google a 25 $ e a 100 $.
+      </p>
+    </div>
+  </main>
+</body>
+</html>
