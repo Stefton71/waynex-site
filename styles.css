@@ -563,12 +563,54 @@ main {
   --phone-width: 196px;
 }
 
+.phone--teaser-lg.phone--hires {
+  --phone-width: 220px;
+}
+
 .phone--large {
   --phone-width: 220px;
 }
 
 .phone--xlarge {
-  --phone-width: min(280px, 72vw);
+  --phone-width: min(360px, 88vw);
+}
+
+/* Native iPhone screenshots at 1206×2622 — no CSS bezel, retina-sharp */
+.phone--hires {
+  --phone-width: min(360px, 88vw);
+  filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.24));
+}
+
+.phone--hires::before,
+.phone--hires::after {
+  display: none;
+}
+
+.phone--hires .phone-bezel {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.phone--hires .phone-screen {
+  border-radius: clamp(28px, 8%, 42px);
+  aspect-ratio: 1206 / 2622;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 24px 48px rgba(0, 0, 0, 0.28);
+}
+
+.phone--hires .phone-screen img {
+  object-fit: cover;
+  object-position: top center;
+}
+
+.shots-fan .phone--hires {
+  --phone-width: 168px;
+}
+
+.shots-fan .phone--hires.phone--center {
+  --phone-width: 200px;
 }
 
 .phone-bezel {
@@ -1017,7 +1059,7 @@ main {
   }
 
   .phone--xlarge {
-    --phone-width: min(250px, 78vw);
+    --phone-width: min(320px, 88vw);
   }
 
   .phone--teaser-lg {
