@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=9">
-  <script defer src="costi.js"></script>
+  <link rel="stylesheet" href="/styles.css?v=10">
+  <script defer src="costi.js?v=2"></script>
 </head>
 <body class="costi-page">
   <header class="site-header">
@@ -31,12 +31,14 @@
   <main class="costi-main">
     <section class="costi-gate" id="gate">
       <h1>Area interna</h1>
-      <p>Simulatore costi Google e ricavi App Store. Non è in menu: serve la password.</p>
+      <p>Simulatore costi Google e ricavi App Store. Non è in menu: servono nome utente e password.</p>
       <form id="gate-form">
+        <label for="username">Nome utente</label>
+        <input id="username" name="username" type="text" autocomplete="username" required>
         <label for="password">Password</label>
         <input id="password" name="password" type="password" autocomplete="current-password" required>
         <button type="submit">Entra</button>
-        <p class="costi-error" id="gate-error" hidden>Password non corretta.</p>
+        <p class="costi-error" id="gate-error" hidden>Nome utente o password non corretti.</p>
       </form>
     </section>
 

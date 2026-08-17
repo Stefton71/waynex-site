@@ -1,7 +1,14 @@
 (function () {
-  const PASS_HASH =
-    "4a089e248400cc7c47d7a48a1c7118cf7125453d34a9e080d1106f8d8ad6a76d";
-  const SESSION_KEY = "waynex-costi-ok-v2";
+  const USERS = {
+    stefano:
+      "3c4d7f8cccff3dc1a71e136aa418afa8e5a3c2b34241867b891809ad7efeaf1c",
+    sergio:
+      "11961f0a0d062dea5c9dd7743a446983d4e7e3a41fff4a6a0017214ee504d1b3",
+    gabriele:
+      "739a165546236ecb18a559f0ea0ae1cdb0cb8aa89e6d44632b15e528b75b1700",
+  };
+  const USER_ALIASES = { grabriele: "gabriele" };
+  const SESSION_KEY = "waynex-costi-ok-v3";
 
   const EUR_PER_USD = 0.86;
   const VAT = 0.22;
@@ -52,10 +59,14 @@
     render();
   }
 
-  async function tryUnlock(password) {
-    const hash = await sha256Hex(password);
-    if (hash !== PASS_HASH) return false;
-    sessionStorage.setItem(SESSION_KEY, "1");
+  async function tryUnlock(username, password) {
+    const key = (username || "").trim().toLowerCase();
+    const user = USER_ALIASES[key] || key;
+    const expected = USERS[user];
+    if (!expected) return false;
+    const hash = await sha256Hex(user + "\n" + password);
+    if (hash !== expected) return false;
+    sessionStorage.setItem(SESSION_KEY, user);
     unlock();
     return true;
   }
@@ -229,21 +240,23 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    if (sessionStorage.getItem(SESSION_KEY) === "1") unlock();
+    if (sessionStorage.getItem(SESSION_KEY)) unlock();
 
     document.getElementById("gate-form").addEventListener("submit", async (e) => {
       e.preventDefault();
-      const input = document.getElementById("password");
+      const userInput = document.getElementById("username");
+      const passInput = document.getElementById("password");
       const err = document.getElementById("gate-error");
-      const ok = await tryUnlock(input.value);
+      const ok = await tryUnlock(userInput.value, passInput.value);
       err.hidden = ok;
-      if (!ok) input.focus();
+      if (!ok) passInput.focus();
     });
 
     document.getElementById("logout").addEventListener("click", () => {
       sessionStorage.removeItem(SESSION_KEY);
       document.getElementById("app").hidden = true;
       document.getElementById("gate").hidden = false;
+      document.getElementById("username").value = "";
       document.getElementById("password").value = "";
     });
 
