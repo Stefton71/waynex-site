@@ -67,7 +67,7 @@
       shot3Title: 'Viaggia in gruppo',
       shot3Body:
         'Condividi il viaggio via iCloud: fino a 4 invitati con Plus (2 editor) o fino a 9 con Max. Tutti vedono lo stesso piano, aggiornato in tempo reale.',
-      shot3Caption: 'Viaggi condivisi su iCloud',
+      shot3Caption: 'Condivisione viaggio',
       shot3Alt: 'Condivisione viaggio Waynex',
       shot4Title: 'Spese divise in gruppo',
       shot4Body:
@@ -77,12 +77,12 @@
       shot5Title: 'Documenti e PDF',
       shot5Body:
         'Biglietti, prenotazioni e report PDF del viaggio. Importa da share sheet o fotocamera e tieni tutto accanto al programma.',
-      shot5Caption: 'Programma e prenotazioni',
+      shot5Caption: 'Documenti e biglietti',
       shot5Alt: 'Documenti e programma Waynex',
       shot6Title: 'Crea con AI',
       shot6Body:
         'Genera un itinerario con la tua AI, importa il file JSON in Waynex e personalizzalo con il tuo gruppo. Disponibile con Plus e Max.',
-      shot6Caption: 'Importazione viaggio AI',
+      shot6Caption: 'Crea con AI',
       shot6Alt: 'Creazione viaggio con AI Waynex',
       watchTitle: 'Apple Watch: programma e checklist al polso',
       watchBody:
@@ -186,7 +186,7 @@
       shot3Title: 'Travel as a group',
       shot3Body:
         'Share the trip via iCloud: up to 4 invitees on Plus (2 editors) or up to 9 on Max. Everyone sees the same plan, updated in real time.',
-      shot3Caption: 'Trips shared via iCloud',
+      shot3Caption: 'Trip sharing',
       shot3Alt: 'Waynex trip sharing',
       shot4Title: 'Split group expenses',
       shot4Body:
@@ -196,12 +196,12 @@
       shot5Title: 'Documents & PDF',
       shot5Body:
         'Tickets, bookings, and trip PDF reports. Import from the share sheet or camera and keep everything next to your itinerary.',
-      shot5Caption: 'Itinerary & bookings',
+      shot5Caption: 'Documents & tickets',
       shot5Alt: 'Waynex documents and itinerary',
       shot6Title: 'Create with AI',
       shot6Body:
         'Generate an itinerary with your AI, import the JSON file into Waynex, and refine it with your group. Available on Plus and Max.',
-      shot6Caption: 'AI trip import',
+      shot6Caption: 'Create with AI',
       shot6Alt: 'Waynex AI trip creation',
       watchTitle: 'Apple Watch: itinerary and checklist on your wrist',
       watchBody:
