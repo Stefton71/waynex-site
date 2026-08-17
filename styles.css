@@ -277,9 +277,37 @@ main {
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.feature-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 44px rgba(26, 47, 75, 0.1);
+.feature-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.feature-card-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(26, 47, 75, 0.12);
+  text-decoration: none;
+  color: inherit;
+}
+
+.feature-card-link--watch {
+  border-color: rgba(61, 139, 158, 0.22);
+  background:
+    radial-gradient(ellipse 120% 80% at 100% 0%, rgba(61, 139, 158, 0.1), transparent 55%),
+    var(--card);
+}
+
+.feature-link-hint {
+  display: inline-block;
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--sea);
+  letter-spacing: 0.01em;
+}
+
+.feature-card-link--watch .feature-link-hint {
+  color: var(--warm);
 }
 
 .feature-icon {
@@ -481,56 +509,93 @@ main {
   min-height: 200px;
 }
 
-/* ── iPhone frame ── */
+/* ── iPhone Pro frame (screenshots already include status bar + Dynamic Island) ── */
 .phone {
   --phone-width: 160px;
+  --phone-bezel: max(8px, calc(var(--phone-width) * 0.034));
+  --phone-outer-r: calc(var(--phone-width) * 0.145 + var(--phone-bezel));
+  --phone-inner-r: calc(var(--phone-width) * 0.118);
+  position: relative;
   width: var(--phone-width);
   max-width: var(--phone-width);
   flex: 0 0 var(--phone-width);
+  filter: drop-shadow(0 22px 44px rgba(0, 0, 0, 0.34));
+}
+
+/* Side buttons */
+.phone::before,
+.phone::after {
+  content: "";
+  position: absolute;
+  z-index: 4;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #4a4a50 0%, #222226 45%, #151518 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 0 0 0.5px rgba(0, 0, 0, 0.55);
+}
+
+.phone::before {
+  left: calc(var(--phone-bezel) * -0.55);
+  top: 19%;
+  width: max(2px, calc(var(--phone-width) * 0.006));
+  height: calc(var(--phone-width) * 0.085);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 0 0 0.5px rgba(0, 0, 0, 0.55),
+    0 calc(var(--phone-width) * 0.105) 0 0 #2a2a30,
+    0 calc(var(--phone-width) * 0.105) 0 0.5px rgba(0, 0, 0, 0.55);
+}
+
+.phone::after {
+  right: calc(var(--phone-bezel) * -0.55);
+  top: 24%;
+  width: max(2px, calc(var(--phone-width) * 0.006));
+  height: calc(var(--phone-width) * 0.11);
 }
 
 .phone--teaser {
-  --phone-width: 130px;
+  --phone-width: 168px;
   transform: translateY(20px);
 }
 
+.phone--teaser-lg {
+  --phone-width: 196px;
+}
+
 .phone--large {
-  --phone-width: 168px;
+  --phone-width: 220px;
+}
+
+.phone--xlarge {
+  --phone-width: min(280px, 72vw);
 }
 
 .phone-bezel {
   position: relative;
   width: 100%;
-  padding: 7px;
-  border-radius: 32px;
-  background: linear-gradient(145deg, #2a2a2e 0%, #0a0a0c 55%, #1c1c20 100%);
+  padding: var(--phone-bezel);
+  border-radius: var(--phone-outer-r);
+  background:
+    linear-gradient(165deg, rgba(255, 255, 255, 0.12) 0%, transparent 38%),
+    linear-gradient(145deg, #48484f 0%, #1b1b1f 38%, #09090b 72%, #222228 100%);
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.08),
-    0 16px 40px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
-}
-
-.phone-bezel::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 28%;
-  height: 16px;
-  border-radius: 999px;
-  background: #050508;
-  z-index: 2;
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    0 0 0 1.5px rgba(0, 0, 0, 0.65),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.45);
 }
 
 .phone-screen {
   width: 100%;
-  border-radius: 26px;
+  border-radius: var(--phone-inner-r);
   overflow: hidden;
   background: #000;
   aspect-ratio: 1206 / 2622;
   line-height: 0;
+  box-shadow:
+    inset 0 0 0 1px rgba(0, 0, 0, 0.65),
+    inset 0 0 0 2px rgba(255, 255, 255, 0.03);
 }
 
 .phone-screen img {
@@ -540,6 +605,37 @@ main {
   display: block;
   object-fit: cover;
   object-position: top center;
+}
+
+/* Precomposed iPhone 16 Pro mockups: frame, controls and screen are one
+   calibrated image, so no CSS approximation can distort the device. */
+.phone--framed {
+  --phone-bezel: 0px;
+  --phone-outer-r: 0px;
+  --phone-inner-r: 0px;
+  filter: drop-shadow(0 20px 36px rgba(0, 0, 0, 0.24));
+}
+
+.phone--framed::before,
+.phone--framed::after {
+  display: none;
+}
+
+.phone--framed .phone-bezel,
+.phone--framed .phone-screen {
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.phone--framed .phone-screen {
+  aspect-ratio: 1206 / 2495;
+  overflow: visible;
+}
+
+.phone--framed .phone-screen img {
+  object-fit: contain;
 }
 
 /* ── Screenshots page ── */
@@ -591,12 +687,12 @@ main {
   justify-content: center;
   align-items: flex-end;
   gap: 1rem;
-  padding: 0 1rem 1.5rem;
-  overflow: hidden;
+  padding: 0 0.75rem 1.5rem;
+  overflow: visible;
 }
 
 .shots-fan .phone {
-  --phone-width: 118px;
+  --phone-width: 150px;
 }
 
 .shots-fan .phone--left {
@@ -605,7 +701,7 @@ main {
 }
 
 .shots-fan .phone--center {
-  --phone-width: 142px;
+  --phone-width: 190px;
   transform: translateY(-6px);
   z-index: 2;
 }
@@ -615,22 +711,118 @@ main {
   opacity: 0.88;
 }
 
+.shots-jump {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem 0.55rem;
+  margin: 0 0 1.5rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shots-jump a {
+  display: inline-flex;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.shots-jump a:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #fff;
+  text-decoration: none;
+}
+
 .shots-main {
-  max-width: 880px;
+  max-width: 1080px;
   margin: 0 auto;
   padding: 2.5rem 1.25rem 3rem;
 }
 
 .shot-row {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 2rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2.5rem;
   align-items: center;
-  padding: 1.75rem 0;
+  padding: 2rem 0;
+  scroll-margin-top: 5rem;
 }
 
 .shot-row + .shot-row {
   border-top: 1px solid rgba(26, 47, 75, 0.08);
+}
+
+.watch-showcase {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 1.05fr);
+  gap: 2rem;
+  align-items: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: calc(var(--radius) + 8px);
+  background:
+    radial-gradient(ellipse 90% 70% at 0% 0%, rgba(232, 168, 56, 0.12), transparent 55%),
+    radial-gradient(ellipse 80% 60% at 100% 100%, rgba(61, 139, 158, 0.14), transparent 60%),
+    linear-gradient(145deg, #0f1c2e 0%, #1a2f4b 100%);
+  color: #fff;
+  scroll-margin-top: 5rem;
+}
+
+.watch-showcase-copy h2 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.45rem, 3.2vw, 2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.watch-showcase-copy p {
+  margin: 0 0 1rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.65;
+  max-width: 42ch;
+}
+
+.watch-showcase .shot-num {
+  color: var(--warm-soft);
+}
+
+.watch-points {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.watch-points li + li {
+  margin-top: 0.45rem;
+}
+
+.watch-showcase-visual {
+  margin: 0;
+  text-align: center;
+}
+
+.watch-showcase-visual img {
+  width: min(100%, 420px);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 28px 48px rgba(0, 0, 0, 0.35));
+}
+
+.watch-showcase-visual figcaption {
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .shot-row--reverse .shot-copy {
@@ -672,6 +864,8 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 0.85rem;
+  padding: 0 0.35rem;
+  overflow: visible;
 }
 
 .shot-device figcaption {
@@ -819,15 +1013,40 @@ main {
   }
 
   .phone--large {
-    --phone-width: 150px;
+    --phone-width: 200px;
+  }
+
+  .phone--xlarge {
+    --phone-width: min(250px, 78vw);
+  }
+
+  .phone--teaser-lg {
+    --phone-width: 170px;
+  }
+
+  .watch-showcase {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .watch-showcase-copy p,
+  .watch-points {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .watch-points {
+    display: inline-block;
+    text-align: left;
   }
 
   .shots-fan .phone {
-    --phone-width: 100px;
+    --phone-width: 118px;
   }
 
   .shots-fan .phone--center {
-    --phone-width: 118px;
+    --phone-width: 150px;
   }
 }
 
@@ -850,11 +1069,12 @@ main {
   }
 
   .shots-fan .phone--center {
-    --phone-width: 125px;
+    --phone-width: 138px;
   }
 
-  .phone--teaser {
-    --phone-width: 110px;
+  .phone--teaser,
+  .phone--teaser-lg {
+    --phone-width: 150px;
   }
 
   .plan-card.highlight::before {
@@ -868,6 +1088,7 @@ main {
   }
 
   .feature-card,
+  .feature-card-link,
   .hero-cta {
     transition: none;
   }

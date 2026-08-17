@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=3">
+  <link rel="stylesheet" href="/styles.css?v=6">
   <script defer src="/site.js"></script>
 </head>
 <body>
@@ -54,48 +54,54 @@
 
   <main>
     <div class="features">
-      <article class="feature-card">
+      <a class="feature-card feature-card-link" data-link="screenshots" data-shot-hash="plan" href="/screenshots/#plan">
         <div class="feature-icon" aria-hidden="true">🗺️</div>
         <h3 data-i18n="f1Title">Pianifica giorno per giorno</h3>
         <p data-i18n="f1Body">Timeline, mappa e luoghi da scoprire. Tieni tutto sotto controllo prima e durante il viaggio.</p>
-      </article>
-      <article class="feature-card">
+        <span class="feature-link-hint" data-i18n="featureSeeScreen">Vedi schermata →</span>
+      </a>
+      <a class="feature-card feature-card-link" data-link="screenshots" data-shot-hash="sharing" href="/screenshots/#sharing">
         <div class="feature-icon" aria-hidden="true">👥</div>
         <h3 data-i18n="f2Title">Viaggia in gruppo</h3>
         <p data-i18n="f2Body">Condividi il viaggio via iCloud. Tutti vedono lo stesso piano, aggiornato in tempo reale.</p>
-      </article>
-      <article class="feature-card">
+        <span class="feature-link-hint" data-i18n="featureSeeScreen">Vedi schermata →</span>
+      </a>
+      <a class="feature-card feature-card-link" data-link="screenshots" data-shot-hash="budget" href="/screenshots/#budget">
         <div class="feature-icon" aria-hidden="true">💶</div>
         <h3 data-i18n="f3Title">Spese divise</h3>
         <p data-i18n="f3Body">Registra le spese e calcola chi deve cosa a chi. Niente più fogli Excel in vacanza.</p>
-      </article>
-      <article class="feature-card">
+        <span class="feature-link-hint" data-i18n="featureSeeScreen">Vedi schermata →</span>
+      </a>
+      <a class="feature-card feature-card-link" data-link="screenshots" data-shot-hash="documents" href="/screenshots/#documents">
         <div class="feature-icon" aria-hidden="true">📄</div>
         <h3 data-i18n="f4Title">Documenti e PDF</h3>
         <p data-i18n="f4Body">Biglietti, prenotazioni e report PDF del viaggio. Importa da share sheet o fotocamera.</p>
-      </article>
-      <article class="feature-card">
+        <span class="feature-link-hint" data-i18n="featureSeeScreen">Vedi schermata →</span>
+      </a>
+      <a class="feature-card feature-card-link" data-link="screenshots" data-shot-hash="ai" href="/screenshots/#ai">
         <div class="feature-icon" aria-hidden="true">✨</div>
         <h3 data-i18n="f5Title">Crea con AI</h3>
         <p data-i18n="f5Body">Genera un itinerario con l’AI, importalo in Waynex e personalizzalo con il tuo gruppo.</p>
-      </article>
-      <article class="feature-card">
+        <span class="feature-link-hint" data-i18n="featureSeeScreen">Vedi schermata →</span>
+      </a>
+      <a class="feature-card feature-card-link feature-card-link--watch" data-link="screenshots" data-shot-hash="watch" href="/screenshots/#watch">
         <div class="feature-icon" aria-hidden="true">⌚</div>
         <h3 data-i18n="f6Title">Apple Watch</h3>
         <p data-i18n="f6Body">Programma e checklist a polso, sincronizzati con iPhone. Richiede Waynex Plus o Max.</p>
-      </article>
+        <span class="feature-link-hint" data-i18n="featureSeeWatch">Vedi Apple Watch →</span>
+      </a>
     </div>
 
     <section class="section section-screenshots-teaser" id="app">
       <div class="teaser-card">
         <div class="teaser-copy">
           <h2 data-i18n="screenshotsTeaserTitle">Guarda l’app in azione</h2>
-          <p data-i18n="screenshotsTeaserBody">Schermate reali su iPhone: viaggi, timeline e spese di gruppo.</p>
+          <p data-i18n="screenshotsTeaserBody">Schermate ad alta risoluzione: viaggi, timeline, spese, AI e Apple Watch.</p>
           <a class="teaser-link" data-link="screenshots" href="/screenshots/" data-i18n="screenshotsTeaserCta">Vedi tutte le schermate →</a>
         </div>
         <div class="teaser-phone" aria-hidden="true">
-          <div class="phone phone--teaser">
-            <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/02-plan.png" alt=""></div></div>
+          <div class="phone phone--teaser phone--teaser-lg phone--framed">
+            <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/02-plan-framed.png" alt="" loading="lazy" decoding="async"></div></div>
           </div>
         </div>
       </div>
@@ -110,7 +116,7 @@
         <article class="plan-card">
           <h3>Free</h3>
           <ul>
-            <li data-i18n="free1">Fino a 3 viaggi attivi</li>
+            <li data-i18n="free1">1 viaggio personale</li>
             <li data-i18n="free2">Pianificazione e mappa</li>
             <li data-i18n="free3">Spese di gruppo</li>
             <li data-i18n="free4">Icone sui luoghi</li>
@@ -120,8 +126,8 @@
           <span class="plan-tag" data-i18n="planPopular">Popolare</span>
           <h3>Plus</h3>
           <ul>
-            <li data-i18n="plus1">Viaggi illimitati</li>
-            <li data-i18n="plus2">Condivisione (fino a 3, 1 editor)</li>
+            <li data-i18n="plus1">3 viaggi attivi + 3 archiviati</li>
+            <li data-i18n="plus2">Condivisione (fino a 4, 2 editor)</li>
             <li data-i18n="plus3">Report PDF</li>
             <li data-i18n="plus4">Crea e importa viaggi con AI</li>
             <li data-i18n="plus5">Anteprime sui luoghi</li>
@@ -133,8 +139,8 @@
           <ul>
             <li data-i18n="max1">Tutto di Plus</li>
             <li data-i18n="max2">Foto Google sui luoghi</li>
-            <li data-i18n="max3">Modifica insieme (fino a 9)</li>
-            <li data-i18n="max4">Fino a 400 foto al mese</li>
+            <li data-i18n="max3">Modifica insieme (fino a 9, 3 editor)</li>
+            <li data-i18n="max4">Fino a 400 foto Google al mese</li>
           </ul>
         </article>
       </div>

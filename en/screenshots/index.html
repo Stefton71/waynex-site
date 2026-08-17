@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Schermate Waynex su iPhone — viaggi, pianificazione e spese di gruppo.">
+  <meta name="description" content="Schermate Waynex su iPhone e Apple Watch — viaggi, pianificazione, spese e companion al polso.">
   <title>Schermate — Waynex</title>
   <link rel="icon" href="/assets/app-icon.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/app-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=3">
+  <link rel="stylesheet" href="/styles.css?v=6">
   <script defer src="/site.js"></script>
 </head>
 <body class="screenshots-page">
@@ -40,64 +40,140 @@
   <section class="shots-hero">
     <div class="shots-hero-inner">
       <p class="shots-kicker" data-i18n="shotsKicker">Anteprima app</p>
-      <h1 data-i18n="shotsTitle">Waynex sul tuo iPhone</h1>
-      <p class="shots-lead" data-i18n="shotsLead">Schermate reali dall’app — viaggi, timeline giorno per giorno e spese condivise.</p>
+      <h1 data-i18n="shotsTitle">Waynex su iPhone e Apple Watch</h1>
+      <p class="shots-lead" data-i18n="shotsLead">Schermate reali dall’app — viaggi, timeline, spese condivise e programma al polso.</p>
+      <nav class="shots-jump" aria-label="Sezioni schermate">
+        <a href="#trips" data-i18n="shotNavTrips">Viaggi</a>
+        <a href="#plan" data-i18n="shotNavPlan">Pianificazione</a>
+        <a href="#sharing" data-i18n="shotNavSharing">Gruppo</a>
+        <a href="#budget" data-i18n="shotNavBudget">Spese</a>
+        <a href="#documents" data-i18n="shotNavDocuments">Documenti</a>
+        <a href="#ai" data-i18n="shotNavAi">AI</a>
+        <a href="#watch" data-i18n="shotNavWatch">Apple Watch</a>
+      </nav>
       <div class="shots-fan" aria-hidden="true">
-        <div class="phone phone--left">
-          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/01-trips.png" alt=""></div></div>
+        <div class="phone phone--left phone--framed">
+          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/01-trips-framed.png" alt="" loading="eager" decoding="async"></div></div>
         </div>
-        <div class="phone phone--center">
-          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/02-plan.png" alt=""></div></div>
+        <div class="phone phone--center phone--framed">
+          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/02-plan-framed.png" alt="" loading="eager" decoding="async"></div></div>
         </div>
-        <div class="phone phone--right">
-          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/03-budget.png" alt=""></div></div>
+        <div class="phone phone--right phone--framed">
+          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/03-budget-framed.png" alt="" loading="eager" decoding="async"></div></div>
         </div>
       </div>
     </div>
   </section>
 
   <main class="shots-main">
-    <article class="shot-row">
+    <article class="shot-row" id="trips">
       <div class="shot-copy">
         <span class="shot-num">01</span>
         <h2 data-i18n="shot1Title">Tutti i viaggi, un posto solo</h2>
         <p data-i18n="shot1Body">Crea un viaggio manuale o con l’AI. Vedi date, progresso e destinazione a colpo d’occhio — anche il viaggio demo per provare subito.</p>
       </div>
       <figure class="shot-device">
-        <div class="phone phone--large">
-          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/01-trips.png" alt="" data-i18n-alt="shot1Alt"></div></div>
+        <div class="phone phone--xlarge phone--framed">
+          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/01-trips-framed.png" alt="" data-i18n-alt="shot1Alt" loading="lazy" decoding="async"></div></div>
         </div>
         <figcaption data-i18n="shot1Caption">Lista viaggi</figcaption>
       </figure>
     </article>
 
-    <article class="shot-row shot-row--reverse">
+    <article class="shot-row shot-row--reverse" id="plan">
       <div class="shot-copy">
         <span class="shot-num">02</span>
         <h2 data-i18n="shot2Title">Pianifica giorno per giorno</h2>
-        <p data-i18n="shot2Body">Timeline con luoghi, prenotazioni e attività. Scorri i giorni del viaggio e tieni tutto organizzato prima e durante il trip.</p>
+        <p data-i18n="shot2Body">Timeline con luoghi, prenotazioni e attività. Scorri i giorni del viaggio, apri la mappa e tieni tutto organizzato prima e durante il trip.</p>
       </div>
       <figure class="shot-device">
-        <div class="phone phone--large">
-          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/02-plan.png" alt="" data-i18n-alt="shot2Alt"></div></div>
+        <div class="phone phone--xlarge phone--framed">
+          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/02-plan-framed.png" alt="" data-i18n-alt="shot2Alt" loading="lazy" decoding="async"></div></div>
         </div>
         <figcaption data-i18n="shot2Caption">Timeline del viaggio</figcaption>
       </figure>
     </article>
 
-    <article class="shot-row">
+    <article class="shot-row" id="sharing">
       <div class="shot-copy">
         <span class="shot-num">03</span>
-        <h2 data-i18n="shot3Title">Spese divise in gruppo</h2>
-        <p data-i18n="shot3Body">Registra chi ha pagato cosa e chi deve a chi. Niente più fogli Excel in vacanza — tutto resta nel viaggio.</p>
+        <h2 data-i18n="shot3Title">Viaggia in gruppo</h2>
+        <p data-i18n="shot3Body">Condividi il viaggio via iCloud: fino a 4 invitati con Plus (2 editor) o fino a 9 con Max. Tutti vedono lo stesso piano, aggiornato in tempo reale.</p>
       </div>
       <figure class="shot-device">
-        <div class="phone phone--large">
-          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/03-budget.png" alt="" data-i18n-alt="shot3Alt"></div></div>
+        <div class="phone phone--xlarge phone--framed">
+          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/01-trips-framed.png" alt="" data-i18n-alt="shot3Alt" loading="lazy" decoding="async"></div></div>
         </div>
-        <figcaption data-i18n="shot3Caption">Bilanci e spese</figcaption>
+        <figcaption data-i18n="shot3Caption">Viaggi condivisi su iCloud</figcaption>
       </figure>
     </article>
+
+    <article class="shot-row shot-row--reverse" id="budget">
+      <div class="shot-copy">
+        <span class="shot-num">04</span>
+        <h2 data-i18n="shot4Title">Spese divise in gruppo</h2>
+        <p data-i18n="shot4Body">Registra chi ha pagato cosa e chi deve a chi. Bilanci, saldi e rimborsi restano nel viaggio — niente più fogli Excel in vacanza.</p>
+      </div>
+      <figure class="shot-device">
+        <div class="phone phone--xlarge phone--framed">
+          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/03-budget-framed.png" alt="" data-i18n-alt="shot4Alt" loading="lazy" decoding="async"></div></div>
+        </div>
+        <figcaption data-i18n="shot4Caption">Bilanci e spese</figcaption>
+      </figure>
+    </article>
+
+    <article class="shot-row" id="documents">
+      <div class="shot-copy">
+        <span class="shot-num">05</span>
+        <h2 data-i18n="shot5Title">Documenti e PDF</h2>
+        <p data-i18n="shot5Body">Biglietti, prenotazioni e report PDF del viaggio. Importa da share sheet o fotocamera e tieni tutto accanto al programma.</p>
+      </div>
+      <figure class="shot-device">
+        <div class="phone phone--xlarge phone--framed">
+          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/02-plan-framed.png" alt="" data-i18n-alt="shot5Alt" loading="lazy" decoding="async"></div></div>
+        </div>
+        <figcaption data-i18n="shot5Caption">Programma e prenotazioni</figcaption>
+      </figure>
+    </article>
+
+    <article class="shot-row shot-row--reverse" id="ai">
+      <div class="shot-copy">
+        <span class="shot-num">06</span>
+        <h2 data-i18n="shot6Title">Crea con AI</h2>
+        <p data-i18n="shot6Body">Genera un itinerario con la tua AI, importa il file JSON in Waynex e personalizzalo con il tuo gruppo. Disponibile con Plus e Max.</p>
+      </div>
+      <figure class="shot-device">
+        <div class="phone phone--xlarge phone--framed">
+          <div class="phone-bezel"><div class="phone-screen"><img src="/assets/screenshots/04-trips-selected-framed.png" alt="" data-i18n-alt="shot6Alt" loading="lazy" decoding="async"></div></div>
+        </div>
+        <figcaption data-i18n="shot6Caption">Importazione viaggio AI</figcaption>
+      </figure>
+    </article>
+
+    <section class="watch-showcase" id="watch">
+      <div class="watch-showcase-copy">
+        <span class="shot-num">07</span>
+        <h2 data-i18n="watchTitle">Apple Watch: programma e checklist al polso</h2>
+        <p data-i18n="watchBody">Timeline del giorno, attività in evidenza e checklist sincronizzata con iPhone. Ideale in movimento — richiede Waynex Plus o Max.</p>
+        <ul class="watch-points">
+          <li data-i18n="watchPoint1">Giorni e attività del viaggio attivo</li>
+          <li data-i18n="watchPoint2">Checklist con progresso (es. 9/14)</li>
+          <li data-i18n="watchPoint3">Sincronizzazione automatica con iPhone via iCloud</li>
+        </ul>
+      </div>
+      <figure class="watch-showcase-visual">
+        <img
+          src="/assets/screenshots/07-watch-ultra.png"
+          alt="Waynex su Apple Watch Ultra — timeline Abu Dhabi"
+          data-i18n-alt="watchAlt"
+          loading="lazy"
+          decoding="async"
+          width="1024"
+          height="1536"
+        >
+        <figcaption data-i18n="watchCaption">Waynex su Apple Watch Ultra</figcaption>
+      </figure>
+    </section>
 
     <section class="shots-cta">
       <h2 data-i18n="shotsCtaTitle">Provalo tu</h2>
