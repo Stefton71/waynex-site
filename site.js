@@ -246,16 +246,12 @@
   };
 
   function isEnPath() {
-    const path = location.pathname;
+    const path = (location.pathname || '').replace(/\/+$/, '') || '/';
     return path === '/en' || path.startsWith('/en/');
   }
 
   function detectLang() {
-    if (isEnPath()) return 'en';
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === 'it' || stored === 'en') return stored;
-    const browser = (navigator.language || '').toLowerCase();
-    return browser.startsWith('it') ? 'it' : 'en';
+    return isEnPath() ? 'en' : 'it';
   }
 
   function switchLangUrl(lang) {
