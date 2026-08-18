@@ -241,15 +241,37 @@
       privacyHref: '/en/privacy/',
       termsHref: '/en/terms/',
       screenshotsHref: '/en/screenshots/',
-      homeHref: '/',
+      homeHref: '/en/',
     },
   };
 
+  function isEnPath() {
+    const path = location.pathname;
+    return path === '/en' || path.startsWith('/en/');
+  }
+
   function detectLang() {
+    if (isEnPath()) return 'en';
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === 'it' || stored === 'en') return stored;
     const browser = (navigator.language || '').toLowerCase();
     return browser.startsWith('it') ? 'it' : 'en';
+  }
+
+  function switchLangUrl(lang) {
+    const path = location.pathname.replace(/\/+$/, '') || '/';
+    const hash = location.hash || '';
+    if (lang === 'en') {
+      if (path === '/en' || path.startsWith('/en/')) return path + '/' + hash;
+      if (path === '/') return '/en/' + hash;
+      return '/en' + path + '/' + hash;
+    }
+    if (path === '/en') return '/' + hash;
+    if (path.startsWith('/en/')) {
+      const rest = path.slice(3) || '/';
+      return rest + hash;
+    }
+    return path + hash;
   }
 
   function applyLang(lang) {
@@ -319,8 +341,17 @@
 
     document.querySelectorAll('[data-lang-btn]').forEach((btn) => {
       btn.addEventListener('click', (event) => {
+        const lang = btn.getAttribute('data-lang-btn');
+        localStorage.setItem(STORAGE_KEY, lang);
+        const target = btn.getAttribute('href');
+        if (target && target !== '#') return;
         event.preventDefault();
-        applyLang(btn.getAttribute('data-lang-btn'));
+        const next = switchLangUrl(lang);
+        if (next.replace(/\/+$/, '') === (location.pathname.replace(/\/+$/, '') || '/')) {
+          applyLang(lang);
+          return;
+        }
+        location.assign(next);
       });
     });
   });
