@@ -1,8 +1,7 @@
 (function () {
   const STORAGE_KEY = 'waynex-site-lang';
   const DEFAULT_LANG = 'it';
-  // Update when the App Store listing is live (App Store Connect → App Information → Apple ID).
-  const APP_STORE_URL = 'https://apps.apple.com/app/waynex/id0000000000';
+  const APP_STORE_URL = 'https://apps.apple.com/app/waynex/id6789250800';
 
   const copy = {
     it: {
