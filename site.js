@@ -7,24 +7,24 @@
     it: {
       htmlLang: 'it',
       metaDescription:
-        'Waynex — il compagno di viaggio per gruppi. Itinerari, luoghi, documenti e spese in un unico posto.',
-      pageTitle: 'Waynex — Il tuo viaggio, tutto in un posto',
+        'Planner viaggi di gruppo: itinerari, mappa, spese di gruppo e documenti in un’unica app — anche offline. Apple Watch con Plus o Max. Waynex su iPhone, iPad e Apple Watch.',
+      pageTitle: 'Waynex — Planner viaggi: itinerari, mappa, spese e documenti',
       navPrivacy: 'Privacy',
       navTerms: 'Termini',
       navScreenshots: 'App',
       navContact: 'Contatti',
-      heroBadge: 'iPhone · iPad · Apple Watch',
-      heroTitle: 'Il tuo viaggio.<br>Tutto in un unico posto.',
+      heroBadge: 'Planner viaggi · anche offline · Apple Watch (Plus/Max)',
+      heroTitle: 'Viaggi, itinerari, mappa.<br>Spese e documenti in un’unica app.',
       heroLead:
-        'Organizza itinerari, luoghi, documenti e spese di gruppo — anche offline. Condividi con iCloud e viaggiate insieme senza caos.',
+        'Waynex è il planner per viaggi di gruppo: timeline, mappa, spese condivise e documenti — anche offline. Condividi con iCloud. Apple Watch con Plus o Max.',
       heroCta: 'Scarica su App Store',
-      f1Title: 'Pianifica giorno per giorno',
+      f1Title: 'Itinerari e mappa',
       f1Body:
         'Timeline, mappa e luoghi da scoprire. Tieni tutto sotto controllo prima e durante il viaggio.',
       f2Title: 'Viaggia in gruppo',
       f2Body:
         'Condividi il viaggio via iCloud. Tutti vedono lo stesso piano, aggiornato in tempo reale.',
-      f3Title: 'Spese divise',
+      f3Title: 'Spese di gruppo',
       f3Body:
         'Registra le spese e calcola chi deve cosa a chi. Niente più fogli Excel in vacanza.',
       f4Title: 'Documenti e PDF',
@@ -40,7 +40,7 @@
       featureSeeWatch: 'Vedi Apple Watch →',
       screenshotsTeaserTitle: 'Guarda l’app in azione',
       screenshotsTeaserBody:
-        'Schermate ad alta risoluzione: viaggi, timeline, spese, AI e Apple Watch.',
+        'Planner viaggi: itinerari, mappa, spese di gruppo, documenti e Apple Watch — schermate reali dall’app.',
       screenshotsTeaserCta: 'Vedi tutte le schermate →',
       shotsKicker: 'Anteprima app',
       shotsTitle: 'Waynex su iPhone e Apple Watch',
@@ -94,9 +94,9 @@
       shotsCtaTitle: 'Provalo tu',
       shotsCtaBody:
         'Scarica Waynex dall’App Store e inizia con il viaggio demo incluso.',
-      shotsPageTitle: 'Schermate — Waynex',
+      shotsPageTitle: 'Schermate — Waynex planner viaggi',
       shotsMetaDescription:
-        'Schermate Waynex su iPhone e Apple Watch — viaggi, pianificazione, spese e companion al polso.',
+        'Schermate Waynex: planner viaggi con itinerari, mappa, spese di gruppo e documenti — anche offline. Apple Watch con Plus o Max.',
       plansTitle: 'Piani Waynex',
       plansNote:
         'Confronta Free, Plus e Max nell’app. Prezzi e abbonamenti sono quelli mostrati da Apple sul tuo App Store locale.',
@@ -126,24 +126,24 @@
     en: {
       htmlLang: 'en',
       metaDescription:
-        'Waynex — your group travel companion. Itineraries, places, documents, and expenses in one place.',
-      pageTitle: 'Waynex — Your trip, all in one place',
+        'Trip planner for groups: itineraries, map, group expenses, and documents in one app — even offline. Apple Watch with Plus or Max. Waynex for iPhone, iPad, and Apple Watch.',
+      pageTitle: 'Waynex — Trip planner: itineraries, map, expenses & documents',
       navPrivacy: 'Privacy',
       navTerms: 'Terms',
       navScreenshots: 'App',
       navContact: 'Contact',
-      heroBadge: 'iPhone · iPad · Apple Watch',
-      heroTitle: 'Your trip.<br>All in one place.',
+      heroBadge: 'Trip planner · offline · Apple Watch (Plus/Max)',
+      heroTitle: 'Trips, itineraries, map.<br>Expenses and documents in one app.',
       heroLead:
-        'Plan itineraries, places, documents, and group expenses — even offline. Share via iCloud and travel together without the chaos.',
+        'Waynex is your group trip planner: timeline, map, shared expenses, and documents — even offline. Share via iCloud. Apple Watch with Plus or Max.',
       heroCta: 'Download on the App Store',
-      f1Title: 'Plan day by day',
+      f1Title: 'Itineraries & map',
       f1Body:
         'Timeline, map, and places to discover. Stay on top of everything before and during your trip.',
       f2Title: 'Travel as a group',
       f2Body:
         'Share the trip via iCloud. Everyone sees the same plan, updated in real time.',
-      f3Title: 'Split expenses',
+      f3Title: 'Group expenses',
       f3Body:
         'Track spending and see who owes what. No more vacation spreadsheets.',
       f4Title: 'Documents & PDF',
@@ -159,7 +159,7 @@
       featureSeeWatch: 'See Apple Watch →',
       screenshotsTeaserTitle: 'See the app in action',
       screenshotsTeaserBody:
-        'High-resolution screenshots: trips, timeline, expenses, AI, and Apple Watch.',
+        'Trip planner: itineraries, map, group expenses, documents, and Apple Watch — real screenshots from the app.',
       screenshotsTeaserCta: 'View all screenshots →',
       shotsKicker: 'App preview',
       shotsTitle: 'Waynex on iPhone and Apple Watch',
@@ -213,9 +213,9 @@
       shotsCtaTitle: 'Try it yourself',
       shotsCtaBody:
         'Download Waynex from the App Store and start with the included demo trip.',
-      shotsPageTitle: 'Screenshots — Waynex',
+      shotsPageTitle: 'Screenshots — Waynex trip planner',
       shotsMetaDescription:
-        'Waynex screenshots on iPhone and Apple Watch — trips, planning, expenses, and wrist companion.',
+        'Waynex screenshots: trip planner with itineraries, map, group expenses, and documents — even offline. Apple Watch with Plus or Max.',
       plansTitle: 'Waynex plans',
       plansNote:
         'Compare Free, Plus, and Max in the app. Prices and subscriptions are whatever Apple shows in your local App Store.',
