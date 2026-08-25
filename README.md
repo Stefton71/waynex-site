@@ -13,17 +13,24 @@ Cartella **`docs/`** = unica sorgente del sito pubblico.
 
 ## Deploy
 
-GitHub Pages pubblica da branch **`main`**, cartella **`/docs`**.
+**Sorgente locale:** cartella `docs/` in questo repo (monorepo app + sito).
+
+**Pubblicazione live:** [wainex.it](https://wainex.it) è servito dal repo pubblico **[Stefton71/waynex-site](https://github.com/Stefton71/waynex-site)** (branch `main`, root `/`), **non** da `Stefton71/waynex` — GitHub Pages non è disponibile sul repo privato dell’app.
 
 Dopo modifiche al sito:
 
 ```bash
+# 1. committa in waynex (sorgente)
 git add docs/
 git commit -m "…"
-git push origin main
+
+# 2. copia su waynex-site e pubblica
+rsync -av --exclude='.git' docs/ /path/to/waynex-site/
+cd /path/to/waynex-site
+git add -A && git commit -m "…" && git push origin main
 ```
 
-Verifica su https://wainex.it/ (propagazione DNS/Pages: di solito 1–2 minuti).
+Verifica su https://wainex.it/ (propagazione Pages: di solito 1–2 minuti). Hard refresh se vedi cache vecchia.
 
 ## Naming
 
