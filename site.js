@@ -48,6 +48,7 @@
         'Schermate reali dall’app — viaggi, timeline, spese condivise e programma al polso.',
       shotNavTrips: 'Viaggi',
       shotNavPlan: 'Pianificazione',
+      shotNavMap: 'Mappa',
       shotNavSharing: 'Gruppo',
       shotNavBudget: 'Spese',
       shotNavDocuments: 'Documenti',
@@ -63,6 +64,11 @@
         'Timeline con luoghi, prenotazioni e attività. Scorri i giorni del viaggio, apri la mappa e tieni tutto organizzato prima e durante il trip.',
       shot2Caption: 'Timeline del viaggio',
       shot2Alt: 'Timeline del viaggio Waynex',
+      shotMapTitle: 'Mappa e spostamenti del giorno',
+      shotMapBody:
+        'Percorso del giorno sulla mappa, tappe numerate e timeline sotto. Scorri le attività e la vista segue il viaggio.',
+      shotMapCaption: 'Mappa e itinerario',
+      shotMapAlt: 'Mappa del giorno e timeline Waynex',
       shot3Title: 'Viaggia in gruppo',
       shot3Body:
         'Condividi il viaggio via iCloud: fino a 4 invitati con Plus (2 editor) o fino a 9 con Max. Tutti vedono lo stesso piano, aggiornato in tempo reale.',
@@ -167,6 +173,7 @@
         'Real screenshots from the app — trips, timeline, shared expenses, and your itinerary on your wrist.',
       shotNavTrips: 'Trips',
       shotNavPlan: 'Planning',
+      shotNavMap: 'Map',
       shotNavSharing: 'Group',
       shotNavBudget: 'Expenses',
       shotNavDocuments: 'Documents',
@@ -182,6 +189,11 @@
         'Timeline with places, bookings, and activities. Scroll through trip days, open the map, and stay organized before and during travel.',
       shot2Caption: 'Trip timeline',
       shot2Alt: 'Waynex trip timeline',
+      shotMapTitle: 'Map and the day’s movements',
+      shotMapBody:
+        'See the day’s route on the map, with numbered stops and the timeline underneath. Scroll activities and the view follows the trip.',
+      shotMapCaption: 'Map and itinerary',
+      shotMapAlt: 'Waynex day map and timeline',
       shot3Title: 'Travel as a group',
       shot3Body:
         'Share the trip via iCloud: up to 4 invitees on Plus (2 editors) or up to 9 on Max. Everyone sees the same plan, updated in real time.',
