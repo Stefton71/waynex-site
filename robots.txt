@@ -1,5 +1,3 @@
 User-agent: *
 Disallow: /simulatore/
 Disallow: /interno/
-
-Sitemap: https://wainex.it/sitemap.xml
