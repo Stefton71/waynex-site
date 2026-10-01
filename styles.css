@@ -513,6 +513,7 @@ main {
 
 .teaser-copy h2 {
   margin: 0 0 0.5rem;
+  color: #fff;
   font-size: clamp(1.35rem, 3vw, 1.75rem);
   letter-spacing: -0.03em;
 }

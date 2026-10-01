@@ -6,8 +6,12 @@ Cartella **`docs/`** = unica sorgente del sito pubblico.
 |------|------|
 | Homepage IT | `/` → `index.html` |
 | Homepage EN | `/en/` → `en/index.html` |
-| Privacy / Termini | `privacy/`, `terms/`, `en/privacy/`, `en/terms/` |
-| Schermate app | `screenshots/`, `en/screenshots/` |
+| Homepage FR / DE | `/fr/`, `/de/` → `fr/index.html`, `de/index.html` |
+| Privacy / Termini | `privacy/`, `terms/`, `en/privacy/`, `en/terms/` (FR/DE rimandano alla versione EN) |
+| Schermate app | `screenshots/`, `en/screenshots/`, `fr/screenshots/`, `de/screenshots/` |
+| Infografiche home | `assets/infographics/iphone-<lingua>-{1,2}.jpg` (da `design/app-store-v2/output/`, slide 01 e 03) |
+
+I testi di tutte le lingue sono in `site.js` (oggetto `copy`); le pagine HTML contengono gli stessi testi già scritti per i motori di ricerca.
 | Simulatore costi (interno) | `simulatore/` |
 | Dominio custom | `CNAME` → `wainex.it` |
 

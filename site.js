@@ -122,6 +122,10 @@
       max2: 'Fino a 5 viaggi archiviati',
       max3: 'Modifica insieme (fino a 9, 3 editor)',
       max4: 'Pensato per viaggi di gruppo',
+      infoTitle: 'Un intero viaggio, sempre con voi',
+      infoNote: 'Pianifica, viaggia in gruppo e crea itinerari — tutto in un’unica app.',
+      info1Alt: 'Waynex: organizzate insieme, partite leggeri — itinerario, spese e biglietti offline',
+      info2Alt: 'Waynex: mappa del giorno con tappe in ordine e percorso più breve',
       footerPrivacy: 'Privacy Policy',
       footerTerms: 'Termini di utilizzo',
       privacyHref: '/privacy/',
@@ -247,6 +251,10 @@
       max2: 'Up to 5 archived trips',
       max3: 'Co-edit together (up to 9, 3 editors)',
       max4: 'Built for group trips',
+      infoTitle: 'A whole trip, always with you',
+      infoNote: 'Plan together, travel as a group, and create itineraries — all in one app.',
+      info1Alt: 'Waynex: plan together, travel light — itinerary, expenses and offline tickets',
+      info2Alt: 'Waynex: day map with stops in order and the shortest route',
       footerPrivacy: 'Privacy Policy',
       footerTerms: 'Terms of Use',
       privacyHref: '/en/privacy/',
@@ -254,31 +262,284 @@
       screenshotsHref: '/en/screenshots/',
       homeHref: '/en/',
     },
+    fr: {
+      htmlLang: 'fr',
+      metaDescription:
+        'Planner de voyage en groupe : itinéraires, carte, dépenses partagées et documents dans une seule app — même hors ligne. Apple Watch avec Plus ou Max. Waynex pour iPhone, iPad et Apple Watch.',
+      pageTitle: 'Waynex — Planner de voyage : itinéraires, carte, dépenses et documents',
+      navPrivacy: 'Confidentialité',
+      navTerms: 'Conditions',
+      navScreenshots: 'App',
+      navContact: 'Contact',
+      heroBadge: 'Planner de voyage · hors ligne · Apple Watch (Plus/Max)',
+      heroTitle: 'Voyages, itinéraires, carte.<br>Dépenses et documents dans une seule app.',
+      heroLead:
+        'Waynex est le planner des voyages en groupe : timeline, carte, dépenses partagées et documents — même hors ligne. Partage via iCloud. Apple Watch avec Plus ou Max.',
+      heroCta: 'Télécharger dans l’App Store',
+      f1Title: 'Itinéraires et carte',
+      f1Body:
+        'Timeline, carte et lieux à découvrir. Gardez tout sous contrôle avant et pendant le voyage.',
+      f2Title: 'Voyagez en groupe',
+      f2Body:
+        'Partagez le voyage via iCloud. Tout le monde voit le même programme, mis à jour en temps réel.',
+      f3Title: 'Dépenses de groupe',
+      f3Body:
+        'Notez les dépenses et voyez qui doit quoi à qui. Fini les tableurs en vacances.',
+      f4Title: 'Documents et PDF',
+      f4Body:
+        'Billets, réservations et rapports PDF du voyage. Importez depuis le menu Partager ou l’appareil photo.',
+      f5Title: 'Créer avec l’IA',
+      f5Body:
+        'Générez un itinéraire avec l’IA, importez-le dans Waynex et adaptez-le avec votre groupe.',
+      f6Title: 'Apple Watch',
+      f6Body:
+        'Programme et checklist au poignet, synchronisés avec l’iPhone. Nécessite Waynex Plus ou Max.',
+      featureSeeScreen: 'Voir l’écran →',
+      featureSeeWatch: 'Voir l’Apple Watch →',
+      screenshotsTeaserTitle: 'L’app en action',
+      screenshotsTeaserBody:
+        'Planner de voyage : itinéraires, carte, dépenses de groupe, documents et Apple Watch — vraies captures de l’app.',
+      screenshotsTeaserCta: 'Voir toutes les captures →',
+      shotsKicker: 'Aperçu de l’app',
+      shotsTitle: 'Waynex sur iPhone et Apple Watch',
+      shotsLead:
+        'Vraies captures de l’app — voyages, timeline, dépenses partagées et programme au poignet.',
+      shotNavTrips: 'Voyages',
+      shotNavPlan: 'Planification',
+      shotNavMap: 'Carte',
+      shotNavSharing: 'Groupe',
+      shotNavBudget: 'Dépenses',
+      shotNavDocuments: 'Documents',
+      shotNavAi: 'IA',
+      shotNavWatch: 'Apple Watch',
+      shot1Title: 'Tous vos voyages au même endroit',
+      shot1Body:
+        'Créez un voyage à la main ou avec l’IA. Dates, progression et destination en un coup d’œil — avec un voyage démo pour essayer tout de suite.',
+      shot1Caption: 'Liste des voyages',
+      shot1Alt: 'Liste des voyages Waynex',
+      shot2Title: 'Planifiez jour par jour',
+      shot2Body:
+        'Timeline avec lieux, réservations et activités. Parcourez les jours du voyage, ouvrez la carte et restez organisé avant et pendant le voyage.',
+      shot2Caption: 'Timeline du voyage',
+      shot2Alt: 'Timeline du voyage Waynex',
+      shotMapTitle: 'Carte et trajets du jour',
+      shotMapBody:
+        'Le parcours du jour sur la carte, avec étapes numérotées et timeline en dessous. Faites défiler les activités, la carte suit le voyage.',
+      shotMapCaption: 'Carte et itinéraire',
+      shotMapAlt: 'Carte du jour et timeline Waynex',
+      shot3Title: 'Voyagez en groupe',
+      shot3Body:
+        'Partagez le voyage via iCloud : jusqu’à 4 invités avec Plus (2 éditeurs) ou jusqu’à 9 avec Max. Tout le monde voit le même programme, mis à jour en temps réel.',
+      shot3Caption: 'Partage du voyage',
+      shot3Alt: 'Partage du voyage Waynex',
+      shot4Title: 'Dépenses partagées en groupe',
+      shot4Body:
+        'Notez qui a payé quoi et qui doit à qui. Soldes et remboursements restent dans le voyage — fini les tableurs en vacances.',
+      shot4Caption: 'Soldes et dépenses',
+      shot4Alt: 'Dépenses de groupe Waynex',
+      shot5Title: 'Documents et PDF',
+      shot5Body:
+        'Billets, réservations et rapports PDF du voyage. Importez depuis le menu Partager ou l’appareil photo et gardez tout à côté du programme.',
+      shot5Caption: 'Documents et billets',
+      shot5Alt: 'Documents et programme Waynex',
+      shot6Title: 'Créer avec l’IA',
+      shot6Body:
+        'Générez un itinéraire avec votre IA, importez le fichier JSON dans Waynex et adaptez-le avec votre groupe. Disponible avec Plus et Max.',
+      shot6Caption: 'Créer avec l’IA',
+      shot6Alt: 'Création de voyage avec l’IA Waynex',
+      watchTitle: 'Apple Watch : programme et checklist au poignet',
+      watchBody:
+        'Timeline du jour, activités mises en avant et checklist synchronisée avec l’iPhone. Idéal en déplacement — nécessite Waynex Plus ou Max.',
+      watchPoint1: 'Jours et activités du voyage en cours',
+      watchPoint2: 'Checklist avec progression (ex. 9/14)',
+      watchPoint3: 'Synchronisation automatique avec l’iPhone via iCloud',
+      watchCaption: 'Waynex sur Apple Watch Ultra',
+      watchAlt: 'Waynex sur Apple Watch Ultra — timeline Abu Dhabi',
+      shotsCtaTitle: 'Essayez-le',
+      shotsCtaBody:
+        'Téléchargez Waynex sur l’App Store et commencez avec le voyage démo inclus.',
+      shotsPageTitle: 'Captures — Waynex planner de voyage',
+      shotsMetaDescription:
+        'Captures Waynex : planner de voyage avec itinéraires, carte, dépenses de groupe et documents — même hors ligne. Apple Watch avec Plus ou Max.',
+      plansTitle: 'Formules Waynex',
+      plansNote:
+        'Comparez Free, Plus et Max dans l’app. Les prix et abonnements sont ceux affichés par Apple sur votre App Store local.',
+      planPopular: 'Populaire',
+      plansCta: 'Voir les prix sur l’App Store',
+      free1: '1 voyage personnel',
+      free2: 'Planification et carte',
+      free3: 'Dépenses de groupe',
+      free4: 'Icônes des lieux',
+      plus1: '3 voyages actifs + 3 archivés',
+      plus2: 'Partage (jusqu’à 4, 2 éditeurs)',
+      plus3: 'Rapport PDF',
+      plus4: 'Créer et importer des voyages avec l’IA',
+      plus5: 'Aperçus des lieux',
+      plus6: 'App Apple Watch',
+      max1: 'Tout Plus',
+      max2: 'Jusqu’à 5 voyages archivés',
+      max3: 'Modifiez ensemble (jusqu’à 9, 3 éditeurs)',
+      max4: 'Pensé pour les voyages en groupe',
+      infoTitle: 'Tout le voyage, toujours avec vous',
+      infoNote: 'Planifiez, voyagez en groupe et créez des itinéraires — dans une seule app.',
+      info1Alt: 'Waynex : organisez ensemble, partez léger — itinéraire, dépenses et billets hors ligne',
+      info2Alt: 'Waynex : carte du jour avec étapes dans l’ordre et trajet le plus court',
+      footerPrivacy: 'Politique de confidentialité (EN)',
+      footerTerms: 'Conditions d’utilisation (EN)',
+      privacyHref: '/en/privacy/',
+      termsHref: '/en/terms/',
+      screenshotsHref: '/fr/screenshots/',
+      homeHref: '/fr/',
+    },
+    de: {
+      htmlLang: 'de',
+      metaDescription:
+        'Reiseplaner für Gruppen: Reisepläne, Karte, Gruppenausgaben und Dokumente in einer App — auch offline. Apple Watch mit Plus oder Max. Waynex für iPhone, iPad und Apple Watch.',
+      pageTitle: 'Waynex — Reiseplaner: Reisepläne, Karte, Ausgaben und Dokumente',
+      navPrivacy: 'Datenschutz',
+      navTerms: 'Nutzungsbedingungen',
+      navScreenshots: 'App',
+      navContact: 'Kontakt',
+      heroBadge: 'Reiseplaner · offline · Apple Watch (Plus/Max)',
+      heroTitle: 'Reisen, Reisepläne, Karte.<br>Ausgaben und Dokumente in einer App.',
+      heroLead:
+        'Waynex ist der Reiseplaner für Gruppen: Timeline, Karte, geteilte Ausgaben und Dokumente — auch offline. Teilen über iCloud. Apple Watch mit Plus oder Max.',
+      heroCta: 'Im App Store laden',
+      f1Title: 'Reisepläne und Karte',
+      f1Body:
+        'Timeline, Karte und Orte zum Entdecken. Behalte alles im Blick — vor und während der Reise.',
+      f2Title: 'Gemeinsam reisen',
+      f2Body:
+        'Teile die Reise über iCloud. Alle sehen denselben Plan, in Echtzeit aktualisiert.',
+      f3Title: 'Gruppenausgaben',
+      f3Body:
+        'Erfasse Ausgaben und sieh, wer wem was schuldet. Schluss mit Tabellen im Urlaub.',
+      f4Title: 'Dokumente und PDF',
+      f4Body:
+        'Tickets, Buchungen und PDF-Reiseberichte. Import über das Teilen-Menü oder die Kamera.',
+      f5Title: 'Mit KI erstellen',
+      f5Body:
+        'Erstelle einen Reiseplan mit KI, importiere ihn in Waynex und passe ihn mit deiner Gruppe an.',
+      f6Title: 'Apple Watch',
+      f6Body:
+        'Programm und Checkliste am Handgelenk, synchronisiert vom iPhone. Erfordert Waynex Plus oder Max.',
+      featureSeeScreen: 'Screenshot ansehen →',
+      featureSeeWatch: 'Apple Watch ansehen →',
+      screenshotsTeaserTitle: 'Die App in Aktion',
+      screenshotsTeaserBody:
+        'Reiseplaner: Reisepläne, Karte, Gruppenausgaben, Dokumente und Apple Watch — echte Screenshots aus der App.',
+      screenshotsTeaserCta: 'Alle Screenshots ansehen →',
+      shotsKicker: 'App-Vorschau',
+      shotsTitle: 'Waynex auf iPhone und Apple Watch',
+      shotsLead:
+        'Echte Screenshots aus der App — Reisen, Timeline, geteilte Ausgaben und dein Programm am Handgelenk.',
+      shotNavTrips: 'Reisen',
+      shotNavPlan: 'Planung',
+      shotNavMap: 'Karte',
+      shotNavSharing: 'Gruppe',
+      shotNavBudget: 'Ausgaben',
+      shotNavDocuments: 'Dokumente',
+      shotNavAi: 'KI',
+      shotNavWatch: 'Apple Watch',
+      shot1Title: 'Alle Reisen an einem Ort',
+      shot1Body:
+        'Erstelle eine Reise manuell oder mit KI. Daten, Fortschritt und Ziel auf einen Blick — mit Demo-Reise zum sofortigen Ausprobieren.',
+      shot1Caption: 'Reiseliste',
+      shot1Alt: 'Waynex Reiseliste',
+      shot2Title: 'Tag für Tag planen',
+      shot2Body:
+        'Timeline mit Orten, Buchungen und Aktivitäten. Blättere durch die Reisetage, öffne die Karte und bleib organisiert — vor und während der Reise.',
+      shot2Caption: 'Reise-Timeline',
+      shot2Alt: 'Waynex Reise-Timeline',
+      shotMapTitle: 'Karte und Wege des Tages',
+      shotMapBody:
+        'Die Tagesroute auf der Karte, mit nummerierten Stopps und der Timeline darunter. Scrolle durch die Aktivitäten, die Karte folgt der Reise.',
+      shotMapCaption: 'Karte und Reiseplan',
+      shotMapAlt: 'Waynex Tageskarte und Timeline',
+      shot3Title: 'Gemeinsam reisen',
+      shot3Body:
+        'Teile die Reise über iCloud: bis zu 4 Eingeladene mit Plus (2 Bearbeiter) oder bis zu 9 mit Max. Alle sehen denselben Plan, in Echtzeit aktualisiert.',
+      shot3Caption: 'Reise teilen',
+      shot3Alt: 'Waynex Reise teilen',
+      shot4Title: 'Ausgaben in der Gruppe teilen',
+      shot4Body:
+        'Erfasse, wer was bezahlt hat und wer wem etwas schuldet. Salden und Rückzahlungen bleiben in der Reise — Schluss mit Tabellen im Urlaub.',
+      shot4Caption: 'Salden und Ausgaben',
+      shot4Alt: 'Waynex Gruppenausgaben',
+      shot5Title: 'Dokumente und PDF',
+      shot5Body:
+        'Tickets, Buchungen und PDF-Reiseberichte. Import über das Teilen-Menü oder die Kamera — alles direkt neben deinem Programm.',
+      shot5Caption: 'Dokumente und Tickets',
+      shot5Alt: 'Waynex Dokumente und Programm',
+      shot6Title: 'Mit KI erstellen',
+      shot6Body:
+        'Erstelle einen Reiseplan mit deiner KI, importiere die JSON-Datei in Waynex und passe ihn mit deiner Gruppe an. Verfügbar mit Plus und Max.',
+      shot6Caption: 'Mit KI erstellen',
+      shot6Alt: 'Waynex Reise mit KI erstellen',
+      watchTitle: 'Apple Watch: Programm und Checkliste am Handgelenk',
+      watchBody:
+        'Tages-Timeline, hervorgehobene Aktivitäten und eine mit dem iPhone synchronisierte Checkliste. Ideal unterwegs — erfordert Waynex Plus oder Max.',
+      watchPoint1: 'Tage und Aktivitäten der aktiven Reise',
+      watchPoint2: 'Checkliste mit Fortschritt (z. B. 9/14)',
+      watchPoint3: 'Automatische Synchronisierung mit dem iPhone über iCloud',
+      watchCaption: 'Waynex auf der Apple Watch Ultra',
+      watchAlt: 'Waynex auf der Apple Watch Ultra — Timeline Abu Dhabi',
+      shotsCtaTitle: 'Probier es aus',
+      shotsCtaBody:
+        'Lade Waynex im App Store und starte mit der enthaltenen Demo-Reise.',
+      shotsPageTitle: 'Screenshots — Waynex Reiseplaner',
+      shotsMetaDescription:
+        'Waynex Screenshots: Reiseplaner mit Reiseplänen, Karte, Gruppenausgaben und Dokumenten — auch offline. Apple Watch mit Plus oder Max.',
+      plansTitle: 'Waynex-Tarife',
+      plansNote:
+        'Vergleiche Free, Plus und Max in der App. Preise und Abos sind die, die Apple in deinem lokalen App Store anzeigt.',
+      planPopular: 'Beliebt',
+      plansCta: 'Preise im App Store ansehen',
+      free1: '1 persönliche Reise',
+      free2: 'Planung und Karte',
+      free3: 'Gruppenausgaben',
+      free4: 'Ortssymbole',
+      plus1: '3 aktive + 3 archivierte Reisen',
+      plus2: 'Teilen (bis zu 4, 2 Bearbeiter)',
+      plus3: 'PDF-Bericht',
+      plus4: 'Reisen mit KI erstellen und importieren',
+      plus5: 'Ortsvorschauen',
+      plus6: 'Apple Watch App',
+      max1: 'Alles aus Plus',
+      max2: 'Bis zu 5 archivierte Reisen',
+      max3: 'Gemeinsam bearbeiten (bis zu 9, 3 Bearbeiter)',
+      max4: 'Gemacht für Gruppenreisen',
+      infoTitle: 'Die ganze Reise, immer dabei',
+      infoNote: 'Gemeinsam planen, als Gruppe reisen und Reisepläne erstellen — alles in einer App.',
+      info1Alt: 'Waynex: gemeinsam planen, leicht reisen — Reiseplan, Ausgaben und Offline-Tickets',
+      info2Alt: 'Waynex: Tageskarte mit Stopps in Reihenfolge und kürzester Route',
+      footerPrivacy: 'Datenschutzerklärung (EN)',
+      footerTerms: 'Nutzungsbedingungen (EN)',
+      privacyHref: '/en/privacy/',
+      termsHref: '/en/terms/',
+      screenshotsHref: '/de/screenshots/',
+      homeHref: '/de/',
+    },
   };
 
-  function isEnPath() {
-    const path = (location.pathname || '').replace(/\/+$/, '') || '/';
-    return path === '/en' || path.startsWith('/en/');
+  const PATH_LANGS = ['en', 'fr', 'de'];
+
+  function pathLang(path) {
+    const clean = (path || '').replace(/\/+$/, '') || '/';
+    return PATH_LANGS.find((l) => clean === `/${l}` || clean.startsWith(`/${l}/`)) || null;
   }
 
   function detectLang() {
-    return isEnPath() ? 'en' : 'it';
+    return pathLang(location.pathname) || DEFAULT_LANG;
   }
 
   function switchLangUrl(lang) {
     const path = location.pathname.replace(/\/+$/, '') || '/';
     const hash = location.hash || '';
-    if (lang === 'en') {
-      if (path === '/en' || path.startsWith('/en/')) return path + '/' + hash;
-      if (path === '/') return '/en/' + hash;
-      return '/en' + path + '/' + hash;
-    }
-    if (path === '/en') return '/' + hash;
-    if (path.startsWith('/en/')) {
-      const rest = path.slice(3) || '/';
-      return rest + hash;
-    }
-    return path + hash;
+    const current = pathLang(path);
+    const rest = current ? path.slice(current.length + 1) || '/' : path;
+    if (lang === DEFAULT_LANG) return rest + (rest.endsWith('/') ? '' : '/') + hash;
+    return `/${lang}${rest === '/' ? '/' : rest + '/'}${hash}`;
   }
 
   function applyLang(lang) {
